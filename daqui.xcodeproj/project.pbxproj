@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3579CE0725B1CB58005441E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579CE0625B1CB58005441E3 /* AppDelegate.swift */; };
-		3579CE0925B1CB58005441E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579CE0825B1CB58005441E3 /* ContentView.swift */; };
-		3579CE0C25B1CB58005441E3 /* daqui.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3579CE0A25B1CB58005441E3 /* daqui.xcdatamodeld */; };
-		3579CE0E25B1CB5A005441E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3579CE0D25B1CB5A005441E3 /* Assets.xcassets */; };
-		3579CE1125B1CB5A005441E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3579CE1025B1CB5A005441E3 /* Preview Assets.xcassets */; };
-		3579CE1425B1CB5A005441E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3579CE1225B1CB5A005441E3 /* Main.storyboard */; };
+		35B4F53525B1CED700F7BD85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53425B1CED700F7BD85 /* AppDelegate.swift */; };
+		35B4F53725B1CED700F7BD85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53625B1CED700F7BD85 /* SceneDelegate.swift */; };
+		35B4F53925B1CED700F7BD85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53825B1CED700F7BD85 /* ContentView.swift */; };
+		35B4F53C25B1CED700F7BD85 /* daqui.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53A25B1CED700F7BD85 /* daqui.xcdatamodeld */; };
+		35B4F53E25B1CED900F7BD85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B4F53D25B1CED900F7BD85 /* Assets.xcassets */; };
+		35B4F54125B1CED900F7BD85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B4F54025B1CED900F7BD85 /* Preview Assets.xcassets */; };
+		35B4F54425B1CED900F7BD85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B4F54225B1CED900F7BD85 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3579CE0325B1CB58005441E3 /* daqui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daqui.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3579CE0625B1CB58005441E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3579CE0825B1CB58005441E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3579CE0B25B1CB58005441E3 /* daqui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = daqui.xcdatamodel; sourceTree = "<group>"; };
-		3579CE0D25B1CB5A005441E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3579CE1025B1CB5A005441E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3579CE1325B1CB5A005441E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3579CE1525B1CB5A005441E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3579CE1625B1CB5A005441E3 /* daqui.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = daqui.entitlements; sourceTree = "<group>"; };
+		35B4F53125B1CED700F7BD85 /* daqui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daqui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B4F53425B1CED700F7BD85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35B4F53625B1CED700F7BD85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		35B4F53825B1CED700F7BD85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35B4F53B25B1CED700F7BD85 /* daqui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = daqui.xcdatamodel; sourceTree = "<group>"; };
+		35B4F53D25B1CED900F7BD85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35B4F54025B1CED900F7BD85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		35B4F54325B1CED900F7BD85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		35B4F54525B1CED900F7BD85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3579CE0025B1CB57005441E3 /* Frameworks */ = {
+		35B4F52E25B1CED700F7BD85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,41 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3579CDFA25B1CB57005441E3 = {
+		35B4F52825B1CED700F7BD85 = {
 			isa = PBXGroup;
 			children = (
-				3579CE0525B1CB58005441E3 /* daqui */,
-				3579CE0425B1CB58005441E3 /* Products */,
+				35B4F53325B1CED700F7BD85 /* daqui */,
+				35B4F53225B1CED700F7BD85 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3579CE0425B1CB58005441E3 /* Products */ = {
+		35B4F53225B1CED700F7BD85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3579CE0325B1CB58005441E3 /* daqui.app */,
+				35B4F53125B1CED700F7BD85 /* daqui.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3579CE0525B1CB58005441E3 /* daqui */ = {
+		35B4F53325B1CED700F7BD85 /* daqui */ = {
 			isa = PBXGroup;
 			children = (
-				3579CE0625B1CB58005441E3 /* AppDelegate.swift */,
-				3579CE0825B1CB58005441E3 /* ContentView.swift */,
-				3579CE0D25B1CB5A005441E3 /* Assets.xcassets */,
-				3579CE1225B1CB5A005441E3 /* Main.storyboard */,
-				3579CE1525B1CB5A005441E3 /* Info.plist */,
-				3579CE1625B1CB5A005441E3 /* daqui.entitlements */,
-				3579CE0A25B1CB58005441E3 /* daqui.xcdatamodeld */,
-				3579CE0F25B1CB5A005441E3 /* Preview Content */,
+				35B4F53425B1CED700F7BD85 /* AppDelegate.swift */,
+				35B4F53625B1CED700F7BD85 /* SceneDelegate.swift */,
+				35B4F53825B1CED700F7BD85 /* ContentView.swift */,
+				35B4F53D25B1CED900F7BD85 /* Assets.xcassets */,
+				35B4F54225B1CED900F7BD85 /* LaunchScreen.storyboard */,
+				35B4F54525B1CED900F7BD85 /* Info.plist */,
+				35B4F53A25B1CED700F7BD85 /* daqui.xcdatamodeld */,
+				35B4F53F25B1CED900F7BD85 /* Preview Content */,
 			);
 			path = daqui;
 			sourceTree = "<group>";
 		};
-		3579CE0F25B1CB5A005441E3 /* Preview Content */ = {
+		35B4F53F25B1CED900F7BD85 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3579CE1025B1CB5A005441E3 /* Preview Assets.xcassets */,
+				35B4F54025B1CED900F7BD85 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -80,13 +81,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3579CE0225B1CB57005441E3 /* daqui */ = {
+		35B4F53025B1CED700F7BD85 /* daqui */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3579CE1925B1CB5A005441E3 /* Build configuration list for PBXNativeTarget "daqui" */;
+			buildConfigurationList = 35B4F54825B1CED900F7BD85 /* Build configuration list for PBXNativeTarget "daqui" */;
 			buildPhases = (
-				3579CDFF25B1CB57005441E3 /* Sources */,
-				3579CE0025B1CB57005441E3 /* Frameworks */,
-				3579CE0125B1CB57005441E3 /* Resources */,
+				35B4F52D25B1CED700F7BD85 /* Sources */,
+				35B4F52E25B1CED700F7BD85 /* Frameworks */,
+				35B4F52F25B1CED700F7BD85 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -94,24 +95,24 @@
 			);
 			name = daqui;
 			productName = daqui;
-			productReference = 3579CE0325B1CB58005441E3 /* daqui.app */;
+			productReference = 35B4F53125B1CED700F7BD85 /* daqui.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3579CDFB25B1CB57005441E3 /* Project object */ = {
+		35B4F52925B1CED700F7BD85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					3579CE0225B1CB57005441E3 = {
+					35B4F53025B1CED700F7BD85 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = 3579CDFE25B1CB57005441E3 /* Build configuration list for PBXProject "daqui" */;
+			buildConfigurationList = 35B4F52C25B1CED700F7BD85 /* Build configuration list for PBXProject "daqui" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,55 +120,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 3579CDFA25B1CB57005441E3;
-			productRefGroup = 3579CE0425B1CB58005441E3 /* Products */;
+			mainGroup = 35B4F52825B1CED700F7BD85;
+			productRefGroup = 35B4F53225B1CED700F7BD85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3579CE0225B1CB57005441E3 /* daqui */,
+				35B4F53025B1CED700F7BD85 /* daqui */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3579CE0125B1CB57005441E3 /* Resources */ = {
+		35B4F52F25B1CED700F7BD85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3579CE1425B1CB5A005441E3 /* Main.storyboard in Resources */,
-				3579CE1125B1CB5A005441E3 /* Preview Assets.xcassets in Resources */,
-				3579CE0E25B1CB5A005441E3 /* Assets.xcassets in Resources */,
+				35B4F54425B1CED900F7BD85 /* LaunchScreen.storyboard in Resources */,
+				35B4F54125B1CED900F7BD85 /* Preview Assets.xcassets in Resources */,
+				35B4F53E25B1CED900F7BD85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3579CDFF25B1CB57005441E3 /* Sources */ = {
+		35B4F52D25B1CED700F7BD85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3579CE0925B1CB58005441E3 /* ContentView.swift in Sources */,
-				3579CE0C25B1CB58005441E3 /* daqui.xcdatamodeld in Sources */,
-				3579CE0725B1CB58005441E3 /* AppDelegate.swift in Sources */,
+				35B4F53525B1CED700F7BD85 /* AppDelegate.swift in Sources */,
+				35B4F53725B1CED700F7BD85 /* SceneDelegate.swift in Sources */,
+				35B4F53C25B1CED700F7BD85 /* daqui.xcdatamodeld in Sources */,
+				35B4F53925B1CED700F7BD85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3579CE1225B1CB5A005441E3 /* Main.storyboard */ = {
+		35B4F54225B1CED900F7BD85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3579CE1325B1CB5A005441E3 /* Base */,
+				35B4F54325B1CED900F7BD85 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3579CE1725B1CB5A005441E3 /* Debug */ = {
+		35B4F54625B1CED900F7BD85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,17 +220,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		3579CE1825B1CB5A005441E3 /* Release */ = {
+		35B4F54725B1CED900F7BD85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,80 +275,75 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3579CE1A25B1CB5A005441E3 /* Debug */ = {
+		35B4F54925B1CED900F7BD85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = daqui/daqui.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
 				DEVELOPMENT_TEAM = P63952MS7L;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.daqui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3579CE1B25B1CB5A005441E3 /* Release */ = {
+		35B4F54A25B1CED900F7BD85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = daqui/daqui.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
 				DEVELOPMENT_TEAM = P63952MS7L;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.academy.daqui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3579CDFE25B1CB57005441E3 /* Build configuration list for PBXProject "daqui" */ = {
+		35B4F52C25B1CED700F7BD85 /* Build configuration list for PBXProject "daqui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3579CE1725B1CB5A005441E3 /* Debug */,
-				3579CE1825B1CB5A005441E3 /* Release */,
+				35B4F54625B1CED900F7BD85 /* Debug */,
+				35B4F54725B1CED900F7BD85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3579CE1925B1CB5A005441E3 /* Build configuration list for PBXNativeTarget "daqui" */ = {
+		35B4F54825B1CED900F7BD85 /* Build configuration list for PBXNativeTarget "daqui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3579CE1A25B1CB5A005441E3 /* Debug */,
-				3579CE1B25B1CB5A005441E3 /* Release */,
+				35B4F54925B1CED900F7BD85 /* Debug */,
+				35B4F54A25B1CED900F7BD85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -354,17 +351,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3579CE0A25B1CB58005441E3 /* daqui.xcdatamodeld */ = {
+		35B4F53A25B1CED700F7BD85 /* daqui.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3579CE0B25B1CB58005441E3 /* daqui.xcdatamodel */,
+				35B4F53B25B1CED700F7BD85 /* daqui.xcdatamodel */,
 			);
-			currentVersion = 3579CE0B25B1CB58005441E3 /* daqui.xcdatamodel */;
+			currentVersion = 35B4F53B25B1CED700F7BD85 /* daqui.xcdatamodel */;
 			path = daqui.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 3579CDFB25B1CB57005441E3 /* Project object */;
+	rootObject = 35B4F52925B1CED700F7BD85 /* Project object */;
 }
