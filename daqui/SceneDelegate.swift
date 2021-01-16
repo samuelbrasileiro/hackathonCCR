@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,11 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Get the managed object context from the shared persistent container.
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let contentView = ContentView().environment(\.managedObjectContext, context)
-
+        FirebaseApp.configure()
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = TabBarViewController()
+            window.rootViewController = TabBarViewController() //UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }

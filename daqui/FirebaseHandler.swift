@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseCore
 
 enum Collection: String, Codable {
     case costumers
@@ -31,7 +32,7 @@ class FirebaseHandler {
     static var storage = Storage.storage().reference()
     
     init() {
-        
+
     }
     
     
