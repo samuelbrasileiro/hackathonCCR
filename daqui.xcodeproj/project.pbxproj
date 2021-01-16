@@ -22,13 +22,13 @@
 		0CCF893025B1EA340013C7B4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF892F25B1EA340013C7B4 /* Category.swift */; };
 		0CCF893325B1EA750013C7B4 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF893225B1EA750013C7B4 /* Prize.swift */; };
 		0CCF893925B26A6E0013C7B4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF893825B26A6E0013C7B4 /* TabBarView.swift */; };
-		0CCF894325B2705C0013C7B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF894225B2705C0013C7B4 /* ProfileViewController.swift */; };
 		0CCF894825B270BD0013C7B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF894725B270BD0013C7B4 /* ProfileView.swift */; };
 		0CCF894D25B275C50013C7B4 /* TabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF894C25B275C50013C7B4 /* TabViewItem.swift */; };
 		353C5C5225B311A400340D05 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5125B311A400340D05 /* ExploreView.swift */; };
 		353C5C5625B3122200340D05 /* ExploreBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5525B3122200340D05 /* ExploreBank.swift */; };
 		353C5C5925B335F100340D05 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5825B335F100340D05 /* SearchBarView.swift */; };
 		353C5C5C25B33A3800340D05 /* UIEditingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5B25B33A3800340D05 /* UIEditingExtensions.swift */; };
+		353C5C6525B35FC000340D05 /* ProfileBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C6425B35FC000340D05 /* ProfileBank.swift */; };
 		3571B0E425B25CF1001E0877 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571B0E325B25CF1001E0877 /* FirebaseHandler.swift */; };
 		3571B0E825B26244001E0877 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571B0E725B26244001E0877 /* TabBarViewController.swift */; };
 		35B4F53525B1CED700F7BD85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53425B1CED700F7BD85 /* AppDelegate.swift */; };
@@ -57,7 +57,6 @@
 		0CCF892F25B1EA340013C7B4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0CCF893225B1EA750013C7B4 /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		0CCF893825B26A6E0013C7B4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		0CCF894225B2705C0013C7B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0CCF894725B270BD0013C7B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0CCF894C25B275C50013C7B4 /* TabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItem.swift; sourceTree = "<group>"; };
 		323719E9BDADB03D4504960D /* Pods-daqui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daqui.debug.xcconfig"; path = "Target Support Files/Pods-daqui/Pods-daqui.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		353C5C5525B3122200340D05 /* ExploreBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBank.swift; sourceTree = "<group>"; };
 		353C5C5825B335F100340D05 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		353C5C5B25B33A3800340D05 /* UIEditingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEditingExtensions.swift; sourceTree = "<group>"; };
+		353C5C6425B35FC000340D05 /* ProfileBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBank.swift; sourceTree = "<group>"; };
 		3571B0E325B25CF1001E0877 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		3571B0E725B26244001E0877 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		35B4F53125B1CED700F7BD85 /* daqui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daqui.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +139,8 @@
 		0CCF894125B2704D0013C7B4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				0CCF894225B2705C0013C7B4 /* ProfileViewController.swift */,
 				0CCF894725B270BD0013C7B4 /* ProfileView.swift */,
+				353C5C6425B35FC000340D05 /* ProfileBank.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -340,6 +340,7 @@
 				353C5C5925B335F100340D05 /* SearchBarView.swift in Sources */,
 				0CCF894825B270BD0013C7B4 /* ProfileView.swift in Sources */,
 				3571B0E425B25CF1001E0877 /* FirebaseHandler.swift in Sources */,
+				353C5C6525B35FC000340D05 /* ProfileBank.swift in Sources */,
 				35B4F53525B1CED700F7BD85 /* AppDelegate.swift in Sources */,
 				0CCF893925B26A6E0013C7B4 /* TabBarView.swift in Sources */,
 				0CCF893025B1EA340013C7B4 /* Category.swift in Sources */,
@@ -347,7 +348,6 @@
 				0CCF892325B1E7010013C7B4 /* Business.swift in Sources */,
 				0CCF892625B1E92C0013C7B4 /* Trail.swift in Sources */,
 				353C5C5C25B33A3800340D05 /* UIEditingExtensions.swift in Sources */,
-				0CCF894325B2705C0013C7B4 /* ProfileViewController.swift in Sources */,
 				0C10C0BB25B327B800D55B34 /* MyWalletViewController.swift in Sources */,
 				0CCF893325B1EA750013C7B4 /* Prize.swift in Sources */,
 				0CCF892025B1E3DE0013C7B4 /* Costumer.swift in Sources */,
@@ -505,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
-				DEVELOPMENT_TEAM = KBDYNQ5FQB;
+				DEVELOPMENT_TEAM = P63952MS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,7 +527,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
-				DEVELOPMENT_TEAM = KBDYNQ5FQB;
+				DEVELOPMENT_TEAM = P63952MS7L;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
