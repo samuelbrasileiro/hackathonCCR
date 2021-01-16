@@ -30,6 +30,8 @@ struct ExploreView: View {
                 .padding([.leading, .top])
                 Spacer()
             }
+            SearchBarView(bank: bank)
+                .padding(.horizontal)
             Spacer()
             ScrollView{
                 VStack {

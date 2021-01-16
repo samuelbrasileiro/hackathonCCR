@@ -13,6 +13,8 @@ class ExploreBank: ObservableObject{
     
     var businesses: [Business] = []
     
+    @Published var searchText: String = ""
+    @Published var isSearching: Bool = false
     
     init(){
         
