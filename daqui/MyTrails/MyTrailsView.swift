@@ -30,6 +30,7 @@ struct MyTrailsView: View {
                     
                 }) {
                     TrailView(bank: bank, trail: trail, business: business, trailProgress: trailProgress)
+                        .padding()
                 }
 
             }
