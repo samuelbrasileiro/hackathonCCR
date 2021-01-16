@@ -30,6 +30,7 @@ struct SearchBarView: View {
                 
                 Button(action: {
                     self.bank.searchText = ""
+                    UIApplication.shared.endEditing(true)
                 }) {
                     Image(systemName: "xmark.circle.fill").opacity(bank.searchText == "" ? 0 : 1)
                 }

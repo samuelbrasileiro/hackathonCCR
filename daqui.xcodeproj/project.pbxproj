@@ -22,6 +22,7 @@
 		353C5C5225B311A400340D05 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5125B311A400340D05 /* ExploreView.swift */; };
 		353C5C5625B3122200340D05 /* ExploreBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5525B3122200340D05 /* ExploreBank.swift */; };
 		353C5C5925B335F100340D05 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5825B335F100340D05 /* SearchBarView.swift */; };
+		353C5C5C25B33A3800340D05 /* UIEditingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C5C5B25B33A3800340D05 /* UIEditingExtensions.swift */; };
 		3571B0E425B25CF1001E0877 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571B0E325B25CF1001E0877 /* FirebaseHandler.swift */; };
 		3571B0E825B26244001E0877 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571B0E725B26244001E0877 /* TabBarViewController.swift */; };
 		35B4F53525B1CED700F7BD85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4F53425B1CED700F7BD85 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		353C5C5125B311A400340D05 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		353C5C5525B3122200340D05 /* ExploreBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBank.swift; sourceTree = "<group>"; };
 		353C5C5825B335F100340D05 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		353C5C5B25B33A3800340D05 /* UIEditingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEditingExtensions.swift; sourceTree = "<group>"; };
 		3571B0E325B25CF1001E0877 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		3571B0E725B26244001E0877 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		35B4F53125B1CED700F7BD85 /* daqui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daqui.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +158,7 @@
 				35B4F53A25B1CED700F7BD85 /* daqui.xcdatamodeld */,
 				35B4F53F25B1CED900F7BD85 /* Preview Content */,
 				3571B0E325B25CF1001E0877 /* FirebaseHandler.swift */,
+				353C5C5B25B33A3800340D05 /* UIEditingExtensions.swift */,
 			);
 			path = daqui;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				0CCF893025B1EA340013C7B4 /* Category.swift in Sources */,
 				0CCF892325B1E7010013C7B4 /* Business.swift in Sources */,
 				0CCF892625B1E92C0013C7B4 /* Trail.swift in Sources */,
+				353C5C5C25B33A3800340D05 /* UIEditingExtensions.swift in Sources */,
 				0CCF894325B2705C0013C7B4 /* ProfileViewController.swift in Sources */,
 				0CCF893325B1EA750013C7B4 /* Prize.swift in Sources */,
 				0CCF892025B1E3DE0013C7B4 /* Costumer.swift in Sources */,

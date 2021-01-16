@@ -44,6 +44,7 @@ struct ExploreView: View {
                         }
                     }
                 }
+                .resignKeyboardOnDragGesture()
             }
             
         }
