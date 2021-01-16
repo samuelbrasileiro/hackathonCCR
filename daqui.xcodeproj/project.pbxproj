@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C10C0B225B3180200D55B34 /* MyWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C0B125B3180200D55B34 /* MyWalletView.swift */; };
 		0C10C0B525B3203F00D55B34 /* MyWalletBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C0B425B3203F00D55B34 /* MyWalletBank.swift */; };
+		0C10C0B825B322E600D55B34 /* MyWalletContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C0B725B322E600D55B34 /* MyWalletContent.swift */; };
 		0CCF88F525B1DBE30013C7B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF88F425B1DBE30013C7B4 /* GoogleService-Info.plist */; };
 		0CCF891C25B1E06D0013C7B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF891B25B1E06D0013C7B4 /* User.swift */; };
 		0CCF892025B1E3DE0013C7B4 /* Costumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF891F25B1E3DE0013C7B4 /* Costumer.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0C10C0B125B3180200D55B34 /* MyWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletView.swift; sourceTree = "<group>"; };
 		0C10C0B425B3203F00D55B34 /* MyWalletBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletBank.swift; sourceTree = "<group>"; };
+		0C10C0B725B322E600D55B34 /* MyWalletContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletContent.swift; sourceTree = "<group>"; };
 		0CCF88F425B1DBE30013C7B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0CCF891B25B1E06D0013C7B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0CCF891F25B1E3DE0013C7B4 /* Costumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costumer.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				0C10C0B125B3180200D55B34 /* MyWalletView.swift */,
 				0C10C0B425B3203F00D55B34 /* MyWalletBank.swift */,
+				0C10C0B725B322E600D55B34 /* MyWalletContent.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				3571B0E825B26244001E0877 /* TabBarViewController.swift in Sources */,
 				0CCF894D25B275C50013C7B4 /* TabViewItem.swift in Sources */,
 				0CCF891C25B1E06D0013C7B4 /* User.swift in Sources */,
+				0C10C0B825B322E600D55B34 /* MyWalletContent.swift in Sources */,
 				35B4F53925B1CED700F7BD85 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

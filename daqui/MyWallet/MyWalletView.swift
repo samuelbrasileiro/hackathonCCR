@@ -18,34 +18,20 @@ struct MyWalletView: View {
             .multilineTextAlignment(.leading)
             .padding(.top)
         
-        ForEach(prizes.prizes) { prize in
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(.systemGray6))
-                    .frame(height: 137)
-                    .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
-                    .padding()
-                
-                HStack {
-                    Circle()
-                        .fill(Color(.gray))
-                        .frame(width: 86, height: 86, alignment: .leading)
+        ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+            ForEach(prizes.prizes) { prize in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color(.systemGray6))
+                        .frame(height: 137)
+                        .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
+                        .padding()
                     
-                    VStack {
-                        HStack {
-                            Text(prize.discount)
-                                .fontWeight(.bold)
-                                .font(.largeTitle)
-                            
-                            Text(prize.amount)
-                        }
-
-                        Text(prize.product)
-                    }
+                    MyWalletContent(discount: prize.discount, amount: prize.amount, product: prize.product)
                 }
             }
-        }
-        Spacer()
+        })
+
     }
 }
 
