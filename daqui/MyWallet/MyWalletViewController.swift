@@ -34,9 +34,6 @@ class MyWalletViewController: UIViewController {
 
         NSLayoutConstraint.activate(constraints)
     }
-    
-
-
 }
 
 

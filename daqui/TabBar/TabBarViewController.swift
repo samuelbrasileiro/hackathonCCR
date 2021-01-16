@@ -28,7 +28,7 @@ class SelectedView: ObservableObject{
         let costumerTab: [TabViewItem] = [
             TabViewItem(ProfileViewController(), name: "Explorar"),
             TabViewItem(ProfileViewController(), name: "Meu Perfil"),
-            TabViewItem(ProfileViewController(), name: "Trilhas"),
+            TabViewItem(MyTrailsViewController(), name: "Trilhas"),
             TabViewItem(MyWalletViewController(), name: "Cupons")
         ]
         
