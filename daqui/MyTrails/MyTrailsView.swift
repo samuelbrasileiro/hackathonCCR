@@ -21,41 +21,20 @@ struct MyTrailsView: View {
         })
         
         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(.systemBackground))
-                    .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
-                    .frame(height: 137)
-
-                HStack {
+            ForEach(0..<bank.trails.count, id: \.self) { index in
+                let trail = bank.trails[index]
+                let business = bank.getBusiness(by: trail.attributes.idBusiness).first!
+                let trailProgress = bank.getTrailCompletion(by: trail.attributes.id)
+                
+                Button(action: {
                     
-                    if let image = bank.business. {
-                        Image(uiImage: image)
-                            .resizable()
-                            .frame(width: 72, height: 83)
-                            .clipShape(Circle())
-                            .shadow(radius: 7)
-                            .offset(y: -40)
-                            .padding(.leading)
-                    }
-                    
-                    VStack(alignment: .leading){
-                        Text(self.bank.business?.name ?? "Nome da empresa")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundColor(.primary)
-                        
-                        HStack {
-                            Text("Trilha 50%").font(.caption)
-                            ProgressView(value: 0.5).padding()
-                        }.foregroundColor(Color(.systemTeal))
-                        
-                        Text("Próxima Atividade: Compartilhar o Gelinho Gourmet nas Redes Sociais.")
-                            .font(.caption)
-                            .foregroundColor(Color(.systemTeal))
-                    }
+                }) {
+                    TrailView(bank: bank, trail: trail, business: business, trailProgress: trailProgress)
+                        .padding()
                 }
+
             }
+
         })
         .padding()
         .background(Color(.systemGray6))

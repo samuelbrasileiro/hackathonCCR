@@ -10,6 +10,11 @@ import Foundation
 
 class Mission: ObservableObject {
     
+    var attributes: Mission.Database
+    
+    init(attributes: Mission.Database) {
+        self.attributes = attributes
+    }
     
     class Database: Codable {
         var title: String

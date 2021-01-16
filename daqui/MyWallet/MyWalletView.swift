@@ -27,7 +27,7 @@ struct MyWalletView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color(.systemGray6))
                         .frame(height: 137)
-                        .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
+                        .shadow(radius: 10, x: 0, y: 0)
                         .padding()
                     
                     MyWalletContent(discount: prize.discount, amount: prize.amount, product: prize.product)

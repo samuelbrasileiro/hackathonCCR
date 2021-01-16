@@ -19,10 +19,12 @@ class Trail: ObservableObject {
     class Database: Codable {
         var id: String
         var idBusiness: String
+        var idMissions: [String]
         
-        init(id: String, idBusiness: String) {
+        init(id: String, idBusiness: String, idMissions: [String]) {
             self.id = id
             self.idBusiness = idBusiness
+            self.idMissions = idMissions
         }
     }
 }
