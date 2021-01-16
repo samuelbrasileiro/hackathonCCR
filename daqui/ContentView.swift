@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("a")
-        //TabBarView(selectedView: SelectedView())
+        MyWalletView(prizes: MyWalletBank())
     }
 }
 

@@ -10,15 +10,17 @@ import Foundation
 class Prize: ObservableObject {
     
     
-    class Database: Codable {
-        var description: String
-        var title: String
+    class Database: Codable, Identifiable {
+        var discount: String
+        var amount: String
+        var product: String
         var id: String
         
         
-        init(description: String, title: String, id: String) {
-            self.description = description
-            self.title = title
+        init(discount: String, amount: String, product: String, id: String) {
+            self.discount = discount
+            self.amount = amount
+            self.product = product
             self.id = id
         }
     }

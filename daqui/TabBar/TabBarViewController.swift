@@ -28,12 +28,12 @@ class SelectedView: ObservableObject{
         let costumerTab: [TabViewItem] = [
             TabViewItem(ProfileViewController(), name: "Explorar"),
             TabViewItem(ProfileViewController(), name: "Meu Perfil"),
-            TabViewItem(ProfileViewController(), name: "Trilhas"),
-            TabViewItem(ProfileViewController(), name: "Cupons")
+            TabViewItem(MyTrailsViewController(), name: "Trilhas"),
+            TabViewItem(MyWalletViewController(), name: "Cupons")
         ]
         
         //TODO: Modificar condicional
-        self.items = false ? costumerTab : businessTab
+        self.items = true ? costumerTab : businessTab
         
     }
     
@@ -62,15 +62,14 @@ class TabBarViewController: UITabBarController, SelectedViewDelegate {
         
         self.addChild(tabBarHost)
         self.view.addSubview(tabBarHost.view)
-        
         self.tabBar.isHidden = true
         
         let constraints = [
-            tabBarHost.view.topAnchor.constraint(equalTo: self.tabBar.safeAreaLayoutGuide.topAnchor, constant: -20),
+            tabBarHost.view.topAnchor.constraint(equalTo: self.tabBar.safeAreaLayoutGuide.topAnchor, constant: 0),
             tabBarHost.view.centerXAnchor.constraint(equalTo: self.tabBar.safeAreaLayoutGuide.centerXAnchor, constant: 0),
             tabBarHost.view.leadingAnchor.constraint(equalTo: self.tabBar.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             tabBarHost.view.trailingAnchor.constraint(equalTo: self.tabBar.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            tabBarHost.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20)
+            tabBarHost.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40)
         ]
         NSLayoutConstraint.activate(constraints)
     }
