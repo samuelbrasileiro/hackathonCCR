@@ -17,11 +17,9 @@ enum Collection: String, Codable {
     case categories
     case prizes
     
-    
-    //resolve esse problema
-    let folder {
+    var folder: String {
         get{
-            return self + "/"
+            return self.rawValue + "/"
         }
     }
 }
@@ -42,9 +40,8 @@ class FirebaseHandler {
     /// - Parameters:
     ///   - collection: Collections are the categories in which the objects are stored
     ///   - value: The value of the objects
-    class func writeToCollection<Type>(_ collection: Collection, value: Type)
-    where Type: Codable{
-        let childRef = ref.child(collection.rawValue).childByAutoId()
+    class func writeToCollection<Type>(_ collection: Collection, value: Type) where Type: Codable{
+        let childRef = ref.child(collection.folder).childByAutoId()
         
         do {
             var dictionary = try value.asDictionary()
@@ -57,7 +54,7 @@ class FirebaseHandler {
         }
     }
     
-    class func getItemImage<Type>(_ collection: Collection, from id: String, completion: @escaping (Result<UIImage, Error>) -> Void){
+    class func getItemImage(_ collection: Collection, from id: String, completion: @escaping (Result<UIImage, Error>) -> Void){
         let ref = storage.child(collection.folder)
         
         let imageRef = ref.child(id)
@@ -86,7 +83,7 @@ class FirebaseHandler {
     class func readCollection<Type>(_ collection: Collection, id: String, dataType: Type.Type, completion: @escaping (Result<Type,Error>) -> Void)
     where Type: Codable{
         
-        let pathReference = ref.child(collection.rawValue + id)
+        let pathReference = ref.child(collection.folder + id)
         
         pathReference.observeSingleEvent(of: .value, with: {(snapshot) in
             DispatchQueue.main.async {
@@ -126,7 +123,7 @@ class FirebaseHandler {
     class func readAllCollection<Type>(_ collection: Collection, dataType: Type.Type, completion: @escaping (Result<Type,Error>) -> Void)
     where Type: Codable{
         
-        let collectionRef = ref.child(collection.rawValue)
+        let collectionRef = ref.child(collection.folder)
         
         collectionRef.observeSingleEvent(of: .value, with: {(snapshot) in
             

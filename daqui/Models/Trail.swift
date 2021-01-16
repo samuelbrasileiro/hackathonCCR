@@ -12,8 +12,10 @@ class Trail: ObservableObject {
     
     
     class Database: Codable {
-        init() {
-            
+        var id: String
+        
+        init(id: String) {
+            self.id = id
         }
     }
 }

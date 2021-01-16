@@ -15,11 +15,13 @@ class Mission: ObservableObject {
         var title: String
         var description: String
         var isCompleted: Bool
+        var id: String
         
-        init(title: String, description: String, isCompleted: Bool) {
+        init(title: String, description: String, isCompleted: Bool, id: String) {
             self.title = title
             self.description = description
             self.isCompleted = isCompleted
+            self.id = id
         }
     }
     

@@ -13,12 +13,13 @@ class Prize: ObservableObject {
     class Database: Codable {
         var description: String
         var title: String
-        //var id: ???
+        var id: String
         
         
-        init(description: String, title: String) {
+        init(description: String, title: String, id: String) {
             self.description = description
             self.title = title
+            self.id = id
         }
     }
     
