@@ -13,8 +13,6 @@ struct TabBarView: View {
     var delegate: SelectedViewDelegate?
     
     var body: some View {
-        
-        
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(.systemBackground))
@@ -30,21 +28,10 @@ struct TabBarView: View {
                         Image(systemName: "house.circle.fill")
                             .font(Font.system(.largeTitle))
                             .padding()
-
                     }
                     
                 }
             }
-
         }
-
-
     }
 }
-
-//struct TabBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabBarView(selectedView: SelectedView())
-//
-//    }
-//}
