@@ -8,51 +8,58 @@
 import SwiftUI
 
 struct MyTrailsView: View {
+    
+    
+    
     var body: some View {
         HStack(alignment: .firstTextBaseline, content: {
             Text("Minhas trilhas")
                 .fontWeight(.heavy)
                 .font(.largeTitle)
                 .padding()
-
             Spacer()
         })
         
         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(.systemGray6))
-                    .frame(height: 137)
+                    .fill(Color(.systemBackground))
                     .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
-                    .padding()
-                
+                    .frame(height: 137)
+
                 HStack {
-                    Circle()
-                        .fill(Color(.systemGray2))
-                        .frame(width: 72, height: 83)
                     
-                    VStack {
+//                    if let image = business.image{
+//                        Image(uiImage: image)
+//                            .resizable()
+//                            .frame(width: 72, height: 83)
+//                            .clipShape(Circle())
+//                            .shadow(radius: 7)
+//                            .offset(y: -40)
+//                            .padding(.leading)
+//                    }
+                    
+                    VStack(alignment: .leading){
                         Text("Gelinho gourmet do Tutu")
-                            .font(.title)
-                            .fontWeight(.medium)
-                        HStack {
-                            Text("Trilha X%")
-                            ProgressView(value: 0.5)
-                        }
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
                         
                         HStack {
-                            Text("Próxima Atividade: ")
-                            
-                            Text("Compartilhar o Gelinho Gourmet nas Redes Sociais")
-                        }
+                            Text("Trilha 50%").font(.caption)
+                            ProgressView(value: 0.5).padding()
+                        }.foregroundColor(Color(.systemTeal))
+                        
+                        Text("Próxima Atividade: Compartilhar o Gelinho Gourmet nas Redes Sociais.")
+                            .font(.caption)
+                            .foregroundColor(Color(.systemTeal))
                     }
                 }
-
             }
-            
-
-                
         })
+        .padding()
+        .background(Color(.systemGray6))
+        
     }
 }
 

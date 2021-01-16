@@ -10,7 +10,7 @@ import Foundation
 
 class Trail: ObservableObject {
     
-    
+//    FAZER UMA PESQUISA DA TRILHA A PARTIR DO ID INSERIDO NA EMPRESA.
     class Database: Codable {
         var id: String
         
