@@ -13,29 +13,24 @@ struct TabBarView: View {
     var delegate: SelectedViewDelegate?
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color.orange)
-            
-            HStack {
-                ForEach(0..<selectedView.items.count) { index in
-                    Button(selectedView.items[index].name) {
-                        self.selectedView.index = index
-                        delegate?.changeSelectedIndex()
-                    }
+        
+        HStack {
+            ForEach(0..<5) { index in
+                Button("\(index)") {
+                    self.selectedView.index = index
+                    delegate?.changeSelectedIndex()
                 }
             }
         }
+        .background(Color(.systemOrange))
+        .cornerRadius(25)
+
     }
 }
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        let selectedView = SelectedView()
-        let vc = TabBarViewController()
-        
-        let tabBarHost = UIHostingController(
-            rootView: TabBarView(selectedView: vc.selectedView, delegate: vc))
+        TabBarView(selectedView: SelectedView())
         
     }
 }
