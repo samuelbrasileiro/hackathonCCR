@@ -26,9 +26,9 @@ class SelectedView: ObservableObject{
         
         //TODO: Criar novos ViewControllers
         let costumerTab: [TabViewItem] = [
-            TabViewItem(ProfileViewController(), name: "Explorar"),
+            TabViewItem(UIHostingController(rootView: ExploreView(bank: ExploreBank())), name: "Explorar"),
             TabViewItem(ProfileViewController(), name: "Meu Perfil"),
-            TabViewItem(MyTrailsViewController(), name: "Trilhas"),
+            TabViewItem(UIHostingController(rootView: MyTrailsView(bank: MyTrailsBank())), name: "Trilhas"),
             TabViewItem(MyWalletViewController(), name: "Cupons")
         ]
         

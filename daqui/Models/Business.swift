@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-class Business: User, ObservableObject {
+class Business: ObservableObject {
     
     var attributes: Business.Database
     
@@ -18,7 +18,6 @@ class Business: User, ObservableObject {
     
     init(database: Business.Database) {
         attributes = database
-        super.init()
         
         getImage(url: attributes.imgURL)
         getImage(url: attributes.coverURL)
@@ -45,29 +44,37 @@ class Business: User, ObservableObject {
         } .resume()
     }
     
-    class Database: User.Database{
-        var description: String
+    class Database: Codable {
+        var description: String?
         var instagramURL: String?
         var facebookURL: String?
         var category: Business.Category
         var promotionalText: String
         var coverURL: String
+        var name: String
+        var email: String
+        var phone: String
+        var imgURL: String
+        var location: String
+        var id: String
         
-        init(name: String, email: String, phone: String, imgURL: String, location: String, description: String,
-             instagramURL: String?, facebookURL: String?, category: Business.Category, promotionalText: String, coverURL: String, id: String) {
+        init(name: String, email: String, phone: String, imgURL: String, location: String, description: String?,
+             instagramURL: String?, facebookURL: String?, category: Business.Category, promotionalText: String,
+             coverURL: String, id: String) {
             self.description = description
             self.instagramURL = instagramURL
             self.facebookURL = facebookURL
             self.category = category
             self.promotionalText = promotionalText
             self.coverURL = coverURL
-            super.init(name: name, email: email, phone: phone, imgURL: imgURL, location: location, id: id)
+            self.name = name
+            self.email = email
+            self.phone = phone
+            self.imgURL = imgURL
+            self.location = location
+            self.id = id
         }
         
-        required init(from decoder: Decoder) throws {
-            //try super.init(from: decoder)
-            fatalError("cruzes")
-        }
     }
     
     enum Category: String, Codable {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyTrailsView: View {
     
-    
+    @ObservedObject var bank: MyTrailsBank
     
     var body: some View {
         HStack(alignment: .firstTextBaseline, content: {
@@ -29,18 +29,18 @@ struct MyTrailsView: View {
 
                 HStack {
                     
-//                    if let image = business.image{
-//                        Image(uiImage: image)
-//                            .resizable()
-//                            .frame(width: 72, height: 83)
-//                            .clipShape(Circle())
-//                            .shadow(radius: 7)
-//                            .offset(y: -40)
-//                            .padding(.leading)
-//                    }
+                    if let image = bank.business. {
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 72, height: 83)
+                            .clipShape(Circle())
+                            .shadow(radius: 7)
+                            .offset(y: -40)
+                            .padding(.leading)
+                    }
                     
                     VStack(alignment: .leading){
-                        Text("Gelinho gourmet do Tutu")
+                        Text(self.bank.business?.name ?? "Nome da empresa")
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(.primary)
@@ -65,6 +65,6 @@ struct MyTrailsView: View {
 
 struct MyTrailsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyTrailsView()
+        MyTrailsView(bank: MyTrailsBank())
     }
 }

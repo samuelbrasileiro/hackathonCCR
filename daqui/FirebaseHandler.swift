@@ -9,6 +9,7 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseCore
+
 enum Collection: String, Codable {
     case costumers
     case businesses

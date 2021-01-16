@@ -35,7 +35,7 @@ struct ExploreView: View {
             Spacer()
             ScrollView{
                 VStack {
-                    ForEach(0..<bank.businesses.count) { index in
+                    ForEach(0..<bank.businesses.count, id: \.self) { index in
                         Button(action: {
                             
                         }){
@@ -44,6 +44,7 @@ struct ExploreView: View {
                         }
                     }
                 }
+                .padding(.bottom, 80)
                 .resignKeyboardOnDragGesture()
             }
             
