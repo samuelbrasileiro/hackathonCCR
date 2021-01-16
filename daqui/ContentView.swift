@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("a")
+            .background(Color(.systemGray2))
         //TabBarView(selectedView: SelectedView())
     }
 }
