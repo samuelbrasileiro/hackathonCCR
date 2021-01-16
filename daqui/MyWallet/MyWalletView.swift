@@ -12,11 +12,14 @@ struct MyWalletView: View {
     @ObservedObject var prizes: MyWalletBank
     
     var body: some View {
-        Text("Minha carteira")
-            .fontWeight(.heavy)
-            .font(.largeTitle)
-            .multilineTextAlignment(.leading)
-            .padding(.top)
+        HStack(alignment: .firstTextBaseline, content: {
+            Text("Minha carteira")
+                .fontWeight(.heavy)
+                .font(.largeTitle)
+                .padding()
+
+            Spacer()
+        })
         
         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
             ForEach(prizes.prizes) { prize in
