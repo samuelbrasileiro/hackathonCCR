@@ -38,7 +38,7 @@ struct TrailView: View {
                         .foregroundColor(.primary)
                     
                     HStack {
-                        Text("Trilha \(String.init(format: "%.2f", trailProgress))%").font(.caption)
+                        Text("Trilha \(String.init(format: "%.0f", trailProgress))%").font(.caption)
                         ProgressView(value: (trailProgress/100)).padding()
                     }.foregroundColor(Color(.systemTeal))
                     
