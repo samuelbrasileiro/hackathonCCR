@@ -29,11 +29,11 @@ class SelectedView: ObservableObject{
             TabViewItem(ProfileViewController(), name: "Explorar"),
             TabViewItem(ProfileViewController(), name: "Meu Perfil"),
             TabViewItem(ProfileViewController(), name: "Trilhas"),
-            TabViewItem(ProfileViewController(), name: "Cupons")
+            TabViewItem(MyWalletViewController(), name: "Cupons")
         ]
         
         //TODO: Modificar condicional
-        self.items = false ? costumerTab : businessTab
+        self.items = true ? costumerTab : businessTab
         
     }
     
