@@ -15,7 +15,7 @@ struct SettingsView: View {
         VStack {
             HStack(alignment: .firstTextBaseline){
                 Image(systemName: "chevron.left")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(.cyan))
                     .font(.largeTitle)
                 
                 Text("Configurações")
@@ -36,7 +36,7 @@ struct SettingsView: View {
                 print("Adicionar função de mudar foto")
             }) {
                 Text("Mudar foto")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(.cyan))
             }
             
             Text("Meu nome").tablefy()

@@ -29,7 +29,7 @@ struct MyTrailsView: View {
                 Button(action: {
                     
                 }) {
-                    TrailView(bank: bank, trail: trail, business: business, trailProgress: trailProgress)
+                    TrailViewContent(bank: bank, trail: trail, business: business, trailProgress: trailProgress)
                         .padding()
                 }
 

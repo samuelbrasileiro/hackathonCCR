@@ -111,12 +111,14 @@ struct ExploreBusiness: View{
                         else{
                             let pg = Int.random(in: 0...100)
                             Text("Trilha \(pg)%")
-                            .fontWeight(.medium)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color(.greenLight))
                         Spacer()
                         ProgressView(value: CGFloat(pg)/100)
-                            .accentColor(Color(.systemTeal))
+                            .accentColor(Color(.cyan))
+                            .foregroundColor(Color(.cyan))
                         }
-                    }.foregroundColor(Color(.systemTeal))
+                    }
                     .padding(.trailing)
                 }
                 .padding(10)

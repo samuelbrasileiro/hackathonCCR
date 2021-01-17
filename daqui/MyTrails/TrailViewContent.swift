@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrailView: View {
+struct TrailViewContent: View {
     
     @ObservedObject var bank: MyTrailsBank
     let trail: Trail
@@ -38,13 +38,16 @@ struct TrailView: View {
                         .foregroundColor(.primary)
                     
                     HStack {
-                        Text("Trilha \(String.init(format: "%.0f", trailProgress))%").font(.caption)
+                        Text("Trilha \(String.init(format: "%.0f", trailProgress))%")
+                            .fontWeight(.regular)
+                            .foregroundColor(Color(.greenLight))
                         ProgressView(value: (trailProgress/100)).padding()
-                    }.foregroundColor(Color(.systemTeal))
+                            .foregroundColor(Color(.cyan))
+                    }
                     
                     Text("Próxima Atividade: Compartilhar o Gelinho Gourmet nas Redes Sociais.")
                         .font(.caption)
-                        .foregroundColor(Color(.systemTeal))
+                        .foregroundColor(Color(.cyan))
                 }
             }
         }
