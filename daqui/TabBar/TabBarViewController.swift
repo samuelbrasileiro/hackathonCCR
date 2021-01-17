@@ -26,8 +26,8 @@ class SelectedView: ObservableObject{
         let costumerTab: [TabViewItem] = [
             TabViewItem(UIHostingController(rootView: ExploreView(bank: ExploreBank())), name: "Explorar"),
             TabViewItem(UIHostingController(rootView: MyTrailsView(bank: MyTrailsBank())), name: "Trilhas"),
-//            TabViewItem(UIHostingController(rootView: MyWalletView(bank: MyWalletBank())), name: "Cupons")
-            TabViewItem(UIHostingController(rootView: TrailView(bank: MyTrailsBank())), name: "Cupons")
+            TabViewItem(UIHostingController(rootView: MyWalletView(bank: MyWalletBank())), name: "Cupons")
+//            TabViewItem(UIHostingController(rootView: TrailView(bank: TrailBank(id: "-MRBbieNl1cyE1nPtDvK"))), name: "Cupons")
         ]
         
         //TODO: Modificar condicional

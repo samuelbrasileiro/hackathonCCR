@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TrailView: View {
     
-    @ObservedObject var bank: MyTrailsBank
-    
+    @ObservedObject var bank: TrailBank
+    @Binding var isActive: Bool
     
     var body: some View {
         VStack {
@@ -20,8 +20,13 @@ struct TrailView: View {
                         .font(.largeTitle)
                         .bold()
                     
-                    Text("Por Gelinho Gourmet do Tutu")
-                        .font(.callout)
+                    if let business = bank.business {
+                        Text("Por \(business.attributes.name)")
+                            .font(.callout)
+                    } else {
+                        Text("Por Empresa não nomeada")
+                            .font(.callout)
+                    }
                 }
                 .padding(.horizontal, 30)
                 .padding(.vertical)
@@ -49,8 +54,8 @@ struct TrailView: View {
     }
 }
 
-struct TrailView_Previews: PreviewProvider {
-    static var previews: some View {
-        TrailView(bank: MyTrailsBank())
-    }
-}
+//struct TrailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TrailView(bank: TrailBank(id: "-MRBbieNl1cyE1nPtDvK"))
+//    }
+//}
