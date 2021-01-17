@@ -43,6 +43,7 @@ class MyTrailsBank: ObservableObject {
         let trail = trails.filter({ $0.attributes.id == id }).first!
         var trailMission: [Mission] = []
         var missionsCompleted = 0
+        var percentual: Float = 0.0
         
         for missionID in trail.attributes.idMissions {
             
@@ -55,7 +56,12 @@ class MyTrailsBank: ObservableObject {
             missionsCompleted += mission.attributes.isCompleted ? 1 : 0
         }
         
-        let percentual = Float(missionsCompleted/trailMission.count) * 100
+        if trailMission.count > 0 {
+            percentual = Float(missionsCompleted/trailMission.count) * 100
+        } else {
+            percentual = 0.0
+        }
+        
         
         return percentual
     }

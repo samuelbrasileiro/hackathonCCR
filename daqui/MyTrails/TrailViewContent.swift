@@ -14,6 +14,7 @@ struct TrailViewContent: View {
     let business: Business
     let trailProgress: Float
     
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
