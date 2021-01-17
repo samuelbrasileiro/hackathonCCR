@@ -14,157 +14,176 @@ struct ProfileView: View {
     
     @State var isStoryShown: Bool = false
     var body: some View{
-        ScrollView{
-            VStack(alignment: .leading, spacing: 0){
-                if let image = business.coverImage{
-                    ZStack(alignment: .topLeading){
-                        Image(uiImage: image)
-                            .resizable()
-                            .frame(height: 140)
-                        if isActive{
-                            Button(action:{
-                                isActive = false
-                            }){
-                                Image(systemName: "chevron.left")
-                                    .padding()
-                                    .background(Color(.systemBackground))
-                                    .foregroundColor(Color(.systemTeal))
-                                    .clipShape(Circle())
-                                    .padding()
-                            }
-                            .padding(.top, 20)
-                        }
-                    }
-                }
-                
-                HStack{
-                    if let image = business.image{
-                        Image(uiImage: image)
-                            .resizable()
-                            .frame(width: 120, height: 120)
-                            .clipShape(Circle())
-                            .shadow(radius: 7)
-                            
-                            .padding(.top, -60)
-                            .padding(.leading)
-                    }
-                    Spacer()
-                    VStack(alignment: .leading){
-                        Text(business.attributes.name)
-                            
-                            .font(.system(size: 28, weight: .bold, design: .default))
-                            .fontWeight(.bold)
-                            .foregroundColor(.primary)
-                            .lineLimit(2)
-                        Text(business.attributes.promotionalText)
-                            .font(.subheadline)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color(.systemGray))
-                        
-                    }
-                    .padding(.trailing, 10)
-                    Spacer()
-                }
-                
-                VStack{
-                    HStack{
-                        Image(systemName: "mappin.and.ellipse")
-                            .foregroundColor(Color(.poolCyan))
-                        Text(business.attributes.location)
-                            .font(.subheadline)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color(.systemGray))
-                        Spacer()
-                    }
-                    HStack(spacing: 16){
-                        Button(action:{
-                            
-                        }){
-                            Image("phone")
-                                .frame(width: 20, height: 20)
-                                .padding(14)
-                                .background(Color(.poolCyan))
-                                .clipShape(Circle())
-                        }
-                        Button(action:{
-                            
-                        }){
-                            Image("insta")
+        NavigationView{
+            ScrollView{
+                VStack(alignment: .leading, spacing: 0){
+                    if let image = business.coverImage{
+                        ZStack(alignment: .topLeading){
+                            Image(uiImage: image)
                                 .resizable()
-                                .frame(width: 20, height: 20)
-                                .padding(14)
-                                .background(Color(.poolCyan))
-                                .clipShape(Circle())
-                        }
-                        Button(action:{
-                            
-                        }){
-                            Image("zap")
-                                .frame(width: 20, height: 20)
-                                .padding(14)
-                                .background(Color(.poolCyan))
-                                .clipShape(Circle())
-                        }
-                        Spacer()
-                    }
-                    .padding(.top)
-                    
-                    VStack(alignment: .leading){
-                        
-                        HStack{
-                            Text("Nossa história")
-                                .font(.system(size: 20, weight: .medium, design: .default))
-                            Spacer()
-                            Button(action:{
-                                isStoryShown.toggle()
-                            }){
-                                Image(systemName: "chevron." + (isStoryShown ? "up" : "down"))
+                                .frame(height: 140)
+                            if isActive{
+                                Button(action:{
+                                    isActive = false
+                                }){
+                                    Image(systemName: "chevron.left")
+                                        .padding()
+                                        .background(Color(.systemBackground))
+                                        .foregroundColor(Color(.systemTeal))
+                                        .clipShape(Circle())
+                                        .padding()
+                                }
+                                .padding(.top, 20)
                             }
                         }
-                        .padding(.bottom, 5)
-                        if let description = business.attributes.description{
-                            Text(description)
-                                .font(.system(size: 14, weight: .regular, design: .default))
-                                .lineLimit(isStoryShown ? 100 : 3)
-                        }
-                        
                     }
-                    .padding()
-                    .background(Color(.systemBackground))
-                    .cornerRadius(10)
-                    .shadow(radius: 7)
-                    .padding([.top, .bottom, .trailing])
-                    .frame(maxHeight: .infinity)
                     
-                }
-                
-                .padding(.leading)
-                .padding(.top, 10)
-                
-                .padding(.bottom)
-                
-                Text("Acesse nossa trilha!")
-                    .font(.headline)
+                    HStack{
+                        if let image = business.image{
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(width: 120, height: 120)
+                                .clipShape(Circle())
+                                .shadow(radius: 7)
+                                
+                                .padding(.top, -60)
+                                .padding(.leading)
+                        }
+                        Spacer()
+                        VStack(alignment: .leading){
+                            Text(business.attributes.name)
+                                
+                                .font(.system(size: 28, weight: .bold, design: .default))
+                                .fontWeight(.bold)
+                                .foregroundColor(.primary)
+                                .lineLimit(2)
+                            Text(business.attributes.promotionalText)
+                                .font(.subheadline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color(.systemGray))
+                            
+                        }
+                        .padding(.trailing, 10)
+                        Spacer()
+                    }
+                    
+                    VStack{
+                        HStack{
+                            Image(systemName: "mappin.and.ellipse")
+                                .foregroundColor(Color(.poolCyan))
+                            Text(business.attributes.location)
+                                .font(.subheadline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color(.systemGray))
+                            Spacer()
+                        }
+                        HStack(spacing: 16){
+                            Button(action:{
+                                
+                            }){
+                                Image("phone")
+                                    .frame(width: 20, height: 20)
+                                    .padding(14)
+                                    .background(Color(.poolCyan))
+                                    .clipShape(Circle())
+                            }
+                            Button(action:{
+                                
+                            }){
+                                Image("insta")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .padding(14)
+                                    .background(Color(.poolCyan))
+                                    .clipShape(Circle())
+                            }
+                            Button(action:{
+                                
+                            }){
+                                Image("zap")
+                                    .frame(width: 20, height: 20)
+                                    .padding(14)
+                                    .background(Color(.poolCyan))
+                                    .clipShape(Circle())
+                            }
+                            Spacer()
+                        }
+                        .padding(.top)
+                        ZStack(alignment: .topTrailing){
+                            VStack(alignment: .leading){
+                                
+                                HStack{
+                                    Text("Nossa história")
+                                        .font(.system(size: 20, weight: .medium, design: .default))
+                                    Spacer()
+                                    Button(action:{
+                                        isStoryShown.toggle()
+                                    }){
+                                        Image(systemName: "chevron." + (isStoryShown ? "up" : "down"))
+                                    }
+                                }
+                                .padding(.bottom, 5)
+                                if let description = business.attributes.description{
+                                    Text(description)
+                                        .font(.system(size: 14, weight: .regular, design: .default))
+                                        .lineLimit(isStoryShown ? 100 : 3)
+                                }
+                                
+                            }
+                            .padding()
+                            .background(Color(.systemBackground))
+                            .cornerRadius(10)
+                            .shadow(radius: 7)
+                            .padding([.top, .bottom, .trailing])
+                            .frame(maxHeight: .infinity)
+                            
+                            if SelectedView.user == .business{
+                                Button("Editar"){}
+                                    .foregroundColor(Color(.oceanBlue))
+                                    .padding()
+                                    .offset(y: -32)
+                            }
+                        }
+                    }
+                    
                     .padding(.leading)
-                Button(action:{
+                    .padding(.top, 10)
                     
-                }){
-                    Image("coupon")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .shadow(radius: 7)
+                    .padding(.bottom)
+                    
+                    HStack{
+                        Text("Acesse nossa trilha!")
+                            .font(.headline)
+                        
+                        Spacer()
+                        if SelectedView.user == .business{
+                            NavigationLink(destination: TrailMissionSelectionView()){
+                                Text("Substituir")
+                                    .foregroundColor(Color(.oceanBlue))
+                                    .padding(.horizontal)
+                                
+                            }
+                        }
+                    }
+                    .padding(.leading)
+                    NavigationLink(destination: TrailView(trail: Trail(attributes: Trail.Database(id: "1", idBusiness: "12", idMissions: ["0","1","2","4"])), isActive: .constant(true))){
+                        Image("coupon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .shadow(radius: 7)
+                    }
+                    
+                    Spacer()
                 }
                 
-                Spacer()
             }
-            
+            .background(Color(.systemGray6))
+            .animation(.spring())
+            .frame(maxHeight: .infinity)
+            .ignoresSafeArea(.all)
+            .navigationBarHidden(true)
         }
-        .background(Color(.systemGray6))
-        .animation(.spring())
-        .frame(maxHeight: .infinity)
-        .ignoresSafeArea(.all)
         .navigationBarHidden(true)
-        
     }
 }
 

@@ -106,13 +106,14 @@ struct ExploreBusiness: View{
                             
                             Text("Nova trilha disponível")
                                 .fontWeight(.medium)
+                                .foregroundColor(Color(.oceanBlue))
                             Spacer()
                         }
                         else{
                             let pg = Int.random(in: 0...100)
                             Text("Trilha \(pg)%")
                             .fontWeight(.regular)
-                            .foregroundColor(Color(.greenLight))
+                                .foregroundColor(Color(.oceanBlue))
                         Spacer()
                         ProgressView(value: CGFloat(pg)/100)
                             .accentColor(Color(.poolCyan))

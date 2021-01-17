@@ -12,6 +12,7 @@ class Trail: ObservableObject {
     
     var attributes: Trail.Database
     
+    @Published var missions: [Mission] = []
     @Published var business: Business?
     
     class func create(missions: [Bool], discount: String, product: String) {
@@ -25,15 +26,23 @@ class Trail: ObservableObject {
             FirebaseHandler.writeToCollection(.prizes, value: prize.attributes)
         }
     }
-    
+  
     init(attributes: Trail.Database) {
         self.attributes = attributes
-        
+        getMissions()
         FirebaseHandler.readCollection(.businesses, id: attributes.idBusiness, dataType: Business.Database.self){ result in
             if case .success(let database) = result{
                 self.business = Business(database: database)
             }
         }
+    }
+    
+    func getMissions(){
+
+        self.missions = Mission.missions.filter {
+            self.attributes.idMissions.contains($0.attributes.id)
+        }
+        print(missions.count)
     }
     
     class Database: Codable {
