@@ -16,6 +16,8 @@ class Business: ObservableObject {
     
     @Published var coverImage: UIImage?
     
+    @Published var hasNewTrail: Bool = false
+    
     init(database: Business.Database) {
         attributes = database
         

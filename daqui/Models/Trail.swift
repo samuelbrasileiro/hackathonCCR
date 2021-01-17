@@ -12,8 +12,16 @@ class Trail: ObservableObject {
     
     var attributes: Trail.Database
     
+    @Published var business: Business?
+    
     init(attributes: Trail.Database) {
         self.attributes = attributes
+        
+        FirebaseHandler.readCollection(.businesses, id: attributes.idBusiness, dataType: Business.Database.self){ result in
+            if case .success(let database) = result{
+                self.business = Business(database: database)
+            }
+        }
     }
     
     class Database: Codable {
@@ -27,4 +35,6 @@ class Trail: ObservableObject {
             self.idMissions = idMissions
         }
     }
+    
+    
 }

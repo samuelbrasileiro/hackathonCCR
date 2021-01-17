@@ -26,12 +26,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = TabBarViewController() //UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: LoginView()) //UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loginAsCostumer), name: NSNotification.Name(rawValue: "loginAsCostumer"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loginAsBusiness), name: NSNotification.Name(rawValue: "loginAsBusiness"), object: nil)
     }
 
+    @objc func loginAsCostumer(){
+        SelectedView.user = .costumer
+        self.window?.rootViewController = TabBarViewController()
+    }
+    
+    @objc func loginAsBusiness(){
+        SelectedView.user = .business
+        self.window?.rootViewController = TabBarViewController()
+    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
