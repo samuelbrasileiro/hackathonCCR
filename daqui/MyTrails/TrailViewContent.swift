@@ -20,7 +20,6 @@ struct TrailViewContent: View {
                 .resizable()
                 .frame(width: 72, height: 83)
                 .clipShape(Circle())
-                .shadow(radius: 7)
                 .padding(.leading)
             }
         }
@@ -30,7 +29,6 @@ struct TrailViewContent: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color(.systemBackground))
-                .shadow(radius: 10, x: 0, y: 0)
                 .frame(height: 137)
 
             HStack {

@@ -10,30 +10,40 @@ import SwiftUI
 struct MyWalletContent: View {
     
     @ObservedObject var prize: Prize
-    
+    @State var showingDetail = false
     var body: some View {
-        HStack {
-            if let trail = prize.trail{
-                
-                TrailImageView(trail: trail)
-                    .shadow(radius: 7)
-            } else {
-                Circle()
-                    .fill(Color(.gray))
-                    .frame(width: 86, height: 86, alignment: .leading)
-            }
-            VStack {
-                HStack {
-                    Text(prize.attributes.discount)
-                        .fontWeight(.bold)
-                        .font(.largeTitle)
+        Button(action: {
+            self.showingDetail = !self.showingDetail
+        }) {
+            HStack {
+                if let trail = prize.trail{
                     
-                    Text(prize.attributes.amount)
+                    TrailImageView(trail: trail)
+                        .shadow(radius: 7)
+                } else {
+                    Circle()
+                        .fill(Color(.gray))
+                        .frame(width: 86, height: 86, alignment: .leading)
                 }
+                VStack {
+                    HStack {
+                        Text(prize.attributes.discount)
+                            .fontWeight(.bold)
+                            .font(.largeTitle)
+                            .accentColor(.black)
+                        
+                        Text(prize.attributes.amount)
+                            .accentColor(.black)
+                    }
 
-                Text(prize.attributes.product)
+                    Text(prize.attributes.product)
+                        .accentColor(.black)
+                }
             }
+        }.sheet(isPresented: $showingDetail) {
+            PopUpCupom()
         }
+
     }
     
     struct TrailImageView: View{

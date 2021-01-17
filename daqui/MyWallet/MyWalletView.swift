@@ -24,13 +24,13 @@ struct MyWalletView: View {
             
             ScrollView(.vertical, showsIndicators: true, content: {
                 LazyVStack{
-                    ForEach(bank.prizes) { prize in
+                    ForEach(0..<bank.prizes.count) { index in
                         
                         ZStack {
                             ZStack(alignment: .bottom){
                                 ZStack(alignment: .top){
                                     RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color(.systemGray3))
+                                        .fill(Color(index > 1 ? .systemGray2 : .oceanBlue))
                                         .frame(height: 160)
                                     
                                     
@@ -46,7 +46,7 @@ struct MyWalletView: View {
                             }
                             .padding()
                             
-                            MyWalletContent(prize: prize)
+                            MyWalletContent(prize: bank.prizes[index])
                             
                             
                         }

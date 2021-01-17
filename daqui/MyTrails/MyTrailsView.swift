@@ -29,7 +29,7 @@ struct MyTrailsView: View {
                         NavigationLink(
                             destination: TrailView(trail: bank.trails[index], isActive: $navigatedToTrail),
                             isActive: $navigatedToTrail) {
-                            TrailViewContent(bank: bank, trail: bank.trails[index])
+                            TrailViewContent(bank: bank, trail: bank.trails[index]).padding(.vertical)
                         }
                     }
                     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopUpCumpom: View {
+struct PopUpCupom: View {
     
     @State private var isShareSheetShowing = false
     
@@ -101,6 +101,6 @@ struct PopUpCumpom: View {
 
 struct PopUpCumpom_Previews: PreviewProvider {
     static var previews: some View {
-        PopUpCumpom()
+        PopUpCupom()
     }
 }
