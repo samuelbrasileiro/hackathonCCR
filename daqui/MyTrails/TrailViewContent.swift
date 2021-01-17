@@ -42,12 +42,12 @@ struct TrailViewContent: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color(.greenLight))
                         ProgressView(value: (trailProgress/100)).padding()
-                            .foregroundColor(Color(.cyan))
+                            .foregroundColor(Color(.poolCyan))
                     }
                     
                     Text("Próxima Atividade: Compartilhar o Gelinho Gourmet nas Redes Sociais.")
                         .font(.caption)
-                        .foregroundColor(Color(.cyan))
+                        .foregroundColor(Color(.poolCyan))
                 }
             }
         }
