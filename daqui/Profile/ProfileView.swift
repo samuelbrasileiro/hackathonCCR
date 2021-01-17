@@ -42,8 +42,9 @@ struct ProfileView: View {
                         if let image = business.image{
                             Image(uiImage: image)
                                 .resizable()
-                                .frame(width: 120, height: 120)
+                                .aspectRatio(contentMode: .fit)
                                 .clipShape(Circle())
+                                .frame(width: 120, height: 120)
                                 .shadow(radius: 7)
                                 
                                 .padding(.top, -60)

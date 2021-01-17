@@ -48,22 +48,24 @@ struct MyWalletContent: View {
                     .frame(width: 86, height: 86, alignment: .leading)
             }
         }
-        struct BusinessImageView: View{
-            @ObservedObject var business: Business
-            
-            var body: some View{
-                if let image = business.image{
-                    Image(uiImage: image)
-                        .resizable()
-                        .frame(width: 86, height: 86)
-                        .clipShape(Circle())
-                } else {
-                    Circle()
-                        .fill(Color(.gray))
-                        .frame(width: 86, height: 86, alignment: .leading)
-                }
+    }
+    
+    struct BusinessImageView: View{
+        @ObservedObject var business: Business
+        
+        var body: some View{
+            if let image = business.image{
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(width: 86, height: 86)
+                    .clipShape(Circle())
+            } else {
+                Circle()
+                    .fill(Color(.gray))
+                    .frame(width: 86, height: 86, alignment: .leading)
             }
         }
     }
+    
 }
 
