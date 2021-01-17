@@ -29,7 +29,7 @@ struct MissionView: View {
 
                 Text(mission.attributes.title)
                     .multilineTextAlignment(.center)
-                    .padding()
+                    .frame(width: 125)
             }
         }
     }
