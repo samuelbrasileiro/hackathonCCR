@@ -15,6 +15,7 @@
 		0C10C0CC25B339ED00D55B34 /* MyTrailsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C0CB25B339ED00D55B34 /* MyTrailsBank.swift */; };
 		0C10C0D825B3779800D55B34 /* TrailViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C0D725B3779800D55B34 /* TrailViewContent.swift */; };
 		0C10F53A25B4924F00B4E63C /* TrailBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10F53925B4924F00B4E63C /* TrailBank.swift */; };
+		0C10F53F25B4B10400B4E63C /* SelectPrizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10F53E25B4B10400B4E63C /* SelectPrizeView.swift */; };
 		0C3018A625B429D00032FAD8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018A525B429D00032FAD8 /* SettingsView.swift */; };
 		0C3018AA25B42B7E0032FAD8 /* Tablefy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018A925B42B7E0032FAD8 /* Tablefy.swift */; };
 		0C3018AD25B432850032FAD8 /* SettingsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018AC25B432850032FAD8 /* SettingsBank.swift */; };
@@ -65,6 +66,7 @@
 		0C10C0CB25B339ED00D55B34 /* MyTrailsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrailsBank.swift; sourceTree = "<group>"; };
 		0C10C0D725B3779800D55B34 /* TrailViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailViewContent.swift; sourceTree = "<group>"; };
 		0C10F53925B4924F00B4E63C /* TrailBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailBank.swift; sourceTree = "<group>"; };
+		0C10F53E25B4B10400B4E63C /* SelectPrizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPrizeView.swift; sourceTree = "<group>"; };
 		0C3018A525B429D00032FAD8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0C3018A925B42B7E0032FAD8 /* Tablefy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablefy.swift; sourceTree = "<group>"; };
 		0C3018AC25B432850032FAD8 /* SettingsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBank.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				353C5C7725B4810400340D05 /* Create_Trail.swift */,
+				0C10F53E25B4B10400B4E63C /* SelectPrizeView.swift */,
 			);
 			path = TrailCreation;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				353C5C5625B3122200340D05 /* ExploreBank.swift in Sources */,
 				0CCF892D25B1E99D0013C7B4 /* Mission.swift in Sources */,
 				0C10F53A25B4924F00B4E63C /* TrailBank.swift in Sources */,
+				0C10F53F25B4B10400B4E63C /* SelectPrizeView.swift in Sources */,
 				0C10C0D825B3779800D55B34 /* TrailViewContent.swift in Sources */,
 				0C10C0D825B3779800D55B34 /* TrailViewContent.swift in Sources */,
 				353C5C7025B45E5C00340D05 /* LoginView.swift in Sources */,

@@ -74,6 +74,22 @@ class FirebaseHandler {
         }
     }
     
+    class func writeToCollection2<Type>(_ collection: Collection, value: Type) -> String? where Type: Codable{
+            let childRef = ref.child(collection.folder).childByAutoId()
+            
+            do {
+                var dictionary = try value.asDictionary()
+                dictionary["id"] = childRef.key
+                
+                childRef.setValue(dictionary)
+                
+                return childRef.key
+            }
+            catch{
+                print(error)
+                return nil
+            }
+        }
     
     /// Reading the objects written in the previous operation
     /// - Parameters:

@@ -20,17 +20,15 @@ class SelectedView: ObservableObject{
         
         let businessTab: [TabViewItem] = [
             TabViewItem(UIHostingController(rootView: RecursosView()), name: "Recursos"),
-            TabViewItem(UIHostingController(rootView: TrailMissionSelectionView())s,name: "Seleção")
+            TabViewItem(UIHostingController(rootView: TrailMissionSelectionView()),name: "Seleção")
         ]
         
         let costumerTab: [TabViewItem] = [
             TabViewItem(UIHostingController(rootView: ExploreView(bank: ExploreBank())), name: "Explorar"),
             TabViewItem(UIHostingController(rootView: MyTrailsView(bank: MyTrailsBank())), name: "Trilhas"),
             TabViewItem(UIHostingController(rootView: MyWalletView(bank: MyWalletBank())), name: "Cupons")
-//            TabViewItem(UIHostingController(rootView: TrailView(bank: TrailBank(id: "-MRBbieNl1cyE1nPtDvK"))), name: "Cupons")
         ]
         
-        //TODO: Modificar condicional
         items = (SelectedView.user == .costumer ? costumerTab : businessTab)
         
     }
