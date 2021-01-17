@@ -12,13 +12,7 @@ class Prize: Identifiable, ObservableObject {
     
     var attributes: Prize.Database
     
-    var trail: Trail?{
-        didSet {
-            suscription = trail!.objectWillChange.sink { [weak self] _ in
-                     self?.objectWillChange.send()
-               }
-        }
-   }
+    var trail: Trail?
     var suscription: AnyCancellable?
 
     init(database: Prize.Database) {

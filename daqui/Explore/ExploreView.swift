@@ -102,12 +102,20 @@ struct ExploreBusiness: View{
                         .fontWeight(.medium)
                         .foregroundColor(.primary)
                     HStack{
-                        Text("Trilha \(Int(progress*100))%")
+                        if business.hasNewTrail{
+                            
+                            Text("Nova trilha disponível")
+                                .fontWeight(.medium)
+                            Spacer()
+                        }
+                        else{
+                            let pg = Int.random(in: 0...100)
+                            Text("Trilha \(pg)%")
                             .fontWeight(.medium)
                         Spacer()
-                        ProgressView(value: progress)
+                        ProgressView(value: CGFloat(pg)/100)
                             .accentColor(Color(.systemTeal))
-                        
+                        }
                     }.foregroundColor(Color(.systemTeal))
                     .padding(.trailing)
                 }
