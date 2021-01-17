@@ -16,21 +16,30 @@ struct TabBarView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(.systemBackground))
-                .cornerRadius(25)
                 .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
+                
             
             HStack {
                 ForEach(0..<self.selectedView.items.count) { index in
-                    Button(action: {
-                        self.selectedView.index = index
-                        delegate?.changeSelectedIndex()
-                    }) {
-                        Image(systemName: "house.circle.fill")
-                            .font(Font.system(.largeTitle))
-                            .padding()
+                    VStack {
+                        Button(action: {
+                            self.selectedView.index = index
+                            delegate?.changeSelectedIndex()
+                        }) {
+                            Image("\(selectedView.items[index].name)\(selectedView.index == index ? "_Ativo" : "")")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 28, height: 28)
+                                .padding(.horizontal)
+                        }
+                        
+                        Text(selectedView.items[index].name)
+                            .font(.caption)
+                            .foregroundColor(selectedView.index == index ? .blue : .gray)
                     }
-                    
-                }
+                    .padding(.vertical, 10)
+
+                }.padding(.horizontal)
             }
         }
     }

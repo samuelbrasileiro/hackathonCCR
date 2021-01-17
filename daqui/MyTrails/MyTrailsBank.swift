@@ -44,7 +44,6 @@ class MyTrailsBank: ObservableObject {
         var trailMission: [Mission] = []
         var missionsCompleted = 0
         
-        print(missions)
         for missionID in trail.attributes.idMissions {
             
             if let mission = missions.filter({ return $0.attributes.id == missionID }).first {
