@@ -19,7 +19,7 @@
     <a href="https://github.com/samuelbrasileiro/hackathonCCR"><strong>Explore os documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/samuelbrasileiro/hackathonCCR">TestFlight(Em breve)</a>
+    <a href="https://github.com/samuelbrasileiro/hackathonCCR">TestFlight</a>
     ·
     <a href="https://github.com/samuelbrasileiro/hackathonCCR/issues">Reportar erro</a>
     ·
