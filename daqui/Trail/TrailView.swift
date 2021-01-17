@@ -47,7 +47,7 @@ struct TrailView: View {
             }
             
             Spacer()
-        }
+        }.navigationBarTitle("", displayMode: .inline)
  
 
 

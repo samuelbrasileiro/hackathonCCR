@@ -14,10 +14,11 @@ struct MissionView: View {
     
     var body: some View {
         ZStack {
+
             RoundedRectangle(cornerRadius: 17)
                 .fill(color)
                 .frame(width: 125, height: 125)
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .shadow(radius: 10)
             
             VStack {
                 if let image = mission.categoryImage {
