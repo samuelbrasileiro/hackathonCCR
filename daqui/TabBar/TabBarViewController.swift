@@ -26,7 +26,7 @@ class SelectedView: ObservableObject{
             TabViewItem(UIHostingController(rootView: ExploreView(bank: ExploreBank())), name: "Explorar"),
             TabViewItem(UIHostingController(rootView: ProfileView(business: Business(database: Business.Database(name: "Gelinho Gourmet do Lilo", email: "danilo.lira01@gmail.com", phone: "+5581992656003", imgURL: "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/3d/e8/da/3de8daa8-454a-1247-bcf0-a33a50f487af/8429006434299.jpg/200x200bb.jpeg", location: "Recife, PE", description: "Dudu - Dindin - Geladinho - Sacolé O nome não importa, o que importa é o sabor! e nisso a gente se garante (: Dudu do Bom! O seu sorvete no saquinho! O dudu gourmet mais delicioso da região. Recife-PE", instagramURL: "https://www.instagram.com/danilo_lira01", facebookURL: "https://www.facebook.com/Lanilo.Dira01", category: .food, promotionalText: "Sacolés dos melhores sabores", coverURL: "https://is5-ssl.mzstatic.com/image/thumb/Music1/v4/19/bc/9b/19bc9b47-6a0f-e947-1f81-c174e7de0f6d/0617465613456.jpg/200x200bb.jpeg", id: "0101010101")), isActive: .constant(true))), name: "Meu Perfil"),
             TabViewItem(UIHostingController(rootView: MyTrailsView(bank: MyTrailsBank())), name: "Trilhas"),
-            TabViewItem(UIHostingController(rootView: MyWalletView()), name: "Cupons")
+            TabViewItem(UIHostingController(rootView: MyWalletView(bank: MyWalletBank())), name: "Cupons")
         ]
         
         //TODO: Modificar condicional
