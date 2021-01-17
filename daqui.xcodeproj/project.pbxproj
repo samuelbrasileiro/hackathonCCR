@@ -18,7 +18,6 @@
 		0C3018AA25B42B7E0032FAD8 /* Tablefy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018A925B42B7E0032FAD8 /* Tablefy.swift */; };
 		0C3018AD25B432850032FAD8 /* SettingsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018AC25B432850032FAD8 /* SettingsBank.swift */; };
 		0C3018B425B43D5B0032FAD8 /* TrailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018B325B43D5B0032FAD8 /* TrailView.swift */; };
-		0C3018B725B43D6B0032FAD8 /* TrailLineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018B625B43D6B0032FAD8 /* TrailLineShape.swift */; };
 		0C3018BD25B460CB0032FAD8 /* LeftSideTrailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018BC25B460CB0032FAD8 /* LeftSideTrailView.swift */; };
 		0C3018C025B461100032FAD8 /* RightSideTrailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018BF25B461100032FAD8 /* RightSideTrailView.swift */; };
 		0C3018C425B465E70032FAD8 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3018C325B465E60032FAD8 /* MissionView.swift */; };
@@ -69,7 +68,6 @@
 		0C3018A925B42B7E0032FAD8 /* Tablefy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablefy.swift; sourceTree = "<group>"; };
 		0C3018AC25B432850032FAD8 /* SettingsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBank.swift; sourceTree = "<group>"; };
 		0C3018B325B43D5B0032FAD8 /* TrailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailView.swift; sourceTree = "<group>"; };
-		0C3018B625B43D6B0032FAD8 /* TrailLineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailLineShape.swift; sourceTree = "<group>"; };
 		0C3018BC25B460CB0032FAD8 /* LeftSideTrailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideTrailView.swift; sourceTree = "<group>"; };
 		0C3018BF25B461100032FAD8 /* RightSideTrailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSideTrailView.swift; sourceTree = "<group>"; };
 		0C3018C325B465E60032FAD8 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				0C3018B325B43D5B0032FAD8 /* TrailView.swift */,
-				0C3018B625B43D6B0032FAD8 /* TrailLineShape.swift */,
 				0C3018BC25B460CB0032FAD8 /* LeftSideTrailView.swift */,
 				0C3018BF25B461100032FAD8 /* RightSideTrailView.swift */,
 				0C3018C325B465E60032FAD8 /* MissionView.swift */,
@@ -449,7 +446,6 @@
 				0CCF892025B1E3DE0013C7B4 /* Costumer.swift in Sources */,
 				0C3018C725B467400032FAD8 /* ColorExtension.swift in Sources */,
 				AC86279C25B30A3D00AA0C41 /* RecursosView.swift in Sources */,
-				0C3018B725B43D6B0032FAD8 /* TrailLineShape.swift in Sources */,
 				ACD0800825B320D6005B82D9 /* RecursosCardView.swift in Sources */,
 				0C10C0B525B3203F00D55B34 /* MyWalletBank.swift in Sources */,
 				0C3018BD25B460CB0032FAD8 /* LeftSideTrailView.swift in Sources */,
@@ -611,7 +607,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
-				DEVELOPMENT_TEAM = P63952MS7L;
+				DEVELOPMENT_TEAM = KBDYNQ5FQB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -633,7 +629,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"daqui/Preview Content\"";
-				DEVELOPMENT_TEAM = P63952MS7L;
+				DEVELOPMENT_TEAM = KBDYNQ5FQB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = daqui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
