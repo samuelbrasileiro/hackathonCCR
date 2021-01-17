@@ -30,7 +30,6 @@
 		0CCF892325B1E7010013C7B4 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF892225B1E7010013C7B4 /* Business.swift */; };
 		0CCF892625B1E92C0013C7B4 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF892525B1E92C0013C7B4 /* Trail.swift */; };
 		0CCF892D25B1E99D0013C7B4 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF892C25B1E99D0013C7B4 /* Mission.swift */; };
-		0CCF893025B1EA340013C7B4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF892F25B1EA340013C7B4 /* Category.swift */; };
 		0CCF893325B1EA750013C7B4 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF893225B1EA750013C7B4 /* Prize.swift */; };
 		0CCF893925B26A6E0013C7B4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF893825B26A6E0013C7B4 /* TabBarView.swift */; };
 		0CCF894825B270BD0013C7B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCF894725B270BD0013C7B4 /* ProfileView.swift */; };
@@ -81,7 +80,6 @@
 		0CCF892225B1E7010013C7B4 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		0CCF892525B1E92C0013C7B4 /* Trail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
 		0CCF892C25B1E99D0013C7B4 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
-		0CCF892F25B1EA340013C7B4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0CCF893225B1EA750013C7B4 /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		0CCF893825B26A6E0013C7B4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		0CCF894725B270BD0013C7B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				0CCF892225B1E7010013C7B4 /* Business.swift */,
 				0CCF892525B1E92C0013C7B4 /* Trail.swift */,
 				0CCF892C25B1E99D0013C7B4 /* Mission.swift */,
-				0CCF892F25B1EA340013C7B4 /* Category.swift */,
 				0CCF893225B1EA750013C7B4 /* Prize.swift */,
 			);
 			path = Models;
@@ -436,7 +433,6 @@
 				0C3018A625B429D00032FAD8 /* SettingsView.swift in Sources */,
 				0CCF893925B26A6E0013C7B4 /* TabBarView.swift in Sources */,
 				0C3018C425B465E70032FAD8 /* MissionView.swift in Sources */,
-				0CCF893025B1EA340013C7B4 /* Category.swift in Sources */,
 				0C9528EE25B382F900E741A4 /* PopupCupom.swift in Sources */,
 				0C3018AD25B432850032FAD8 /* SettingsBank.swift in Sources */,
 				0C10C0C325B3297500D55B34 /* MyTrailsView.swift in Sources */,
