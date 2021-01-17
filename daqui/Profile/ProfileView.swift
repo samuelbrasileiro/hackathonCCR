@@ -21,15 +21,18 @@ struct ProfileView: View {
                         Image(uiImage: image)
                             .resizable()
                             .frame(height: 140)
-                        Button(action:{
-                            isActive = false
-                        }){
-                            Image(systemName: "chevron.left")
-                                .padding()
-                                .background(Color(.systemBackground))
-                                .foregroundColor(Color(.systemTeal))
-                                .clipShape(Circle())
-                                .padding()
+                        if isActive{
+                            Button(action:{
+                                isActive = false
+                            }){
+                                Image(systemName: "chevron.left")
+                                    .padding()
+                                    .background(Color(.systemBackground))
+                                    .foregroundColor(Color(.systemTeal))
+                                    .clipShape(Circle())
+                                    .padding()
+                            }
+                            .padding(.top, 20)
                         }
                     }
                 }
