@@ -16,9 +16,8 @@ struct TabBarView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(.systemBackground))
-                .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
-                
-            
+                .shadow(radius: 10, x: 0, y: 0)
+
             HStack {
                 ForEach(0..<self.selectedView.items.count) { index in
                     let color = selectedView.index == index ? Color(.greenLight) : Color(.gray)
