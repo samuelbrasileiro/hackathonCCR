@@ -23,6 +23,7 @@ struct MyWalletView: View {
         
         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
             ForEach(prizes.prizes) { prize in
+                
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color(.systemGray6))
@@ -39,7 +40,10 @@ struct MyWalletView: View {
                         .frame(width: 40, height: 40)
                         .padding(.top, 130)
                     
-                    MyWalletContent(discount: prize.attributes.discount, amount: prize.attributes.amount, product: prize.attributes.product, business: prizes.getBusiness(by: prize.attributes.idTrail))
+                    MyWalletContent(discount: prize.attributes.discount,
+                                    amount: prize.attributes.amount,
+                                    product: prize.attributes.product,
+                                    business: nil)
                 }
             }
         })
