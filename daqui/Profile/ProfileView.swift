@@ -10,15 +10,28 @@ import SwiftUI
 struct ProfileView: View {
     var business: Business
     
+    @Binding var isActive: Bool
+    
     @State var isStoryShown: Bool = false
     var body: some View{
         ScrollView{
             VStack(alignment: .leading, spacing: 0){
                 if let image = business.coverImage{
-                    Image(uiImage: image)
-                        .resizable()
-                        .frame(height: 140)
-                    
+                    ZStack(alignment: .topLeading){
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(height: 140)
+                        Button(action:{
+                            isActive = false
+                        }){
+                            Image(systemName: "chevron.left")
+                                .padding()
+                                .background(Color(.systemBackground))
+                                .foregroundColor(Color(.systemTeal))
+                                .clipShape(Circle())
+                                .padding()
+                        }
+                    }
                 }
                 
                 HStack{
@@ -147,13 +160,13 @@ struct ProfileView: View {
         .animation(.spring())
         .frame(maxHeight: .infinity)
         .ignoresSafeArea(.all)
-        
+        .navigationBarHidden(true)
         
     }
 }
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(business: Business(database: Business.Database(name: "Gelinho Gourmet do Lilo", email: "danilo.lira01@gmail.com", phone: "+5581992656003", imgURL: "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/3d/e8/da/3de8daa8-454a-1247-bcf0-a33a50f487af/8429006434299.jpg/200x200bb.jpeg", location: "Recife, PE", description: "Dudu - Dindin - Geladinho - Sacolé\nO nome não importa, o que importa é o sabor! e nisso a gente se garante :)\nDudu do Bom!\nO seu sorvete no saquinho, o dudu gourmet mais delicioso da região.", instagramURL: "https://www.instagram.com/danilo_lira01", facebookURL: "https://www.facebook.com/Lanilo.Dira01", category: .food, promotionalText: "Sacolés dos melhores sabores", coverURL: "https://is5-ssl.mzstatic.com/image/thumb/Music1/v4/19/bc/9b/19bc9b47-6a0f-e947-1f81-c174e7de0f6d/0617465613456.jpg/200x200bb.jpeg", id: "0101010101")))
+        ProfileView(business: Business(database: Business.Database(name: "Gelinho Gourmet do Lilo", email: "danilo.lira01@gmail.com", phone: "+5581992656003", imgURL: "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/3d/e8/da/3de8daa8-454a-1247-bcf0-a33a50f487af/8429006434299.jpg/200x200bb.jpeg", location: "Recife, PE", description: "Dudu - Dindin - Geladinho - Sacolé\nO nome não importa, o que importa é o sabor! e nisso a gente se garante :)\nDudu do Bom!\nO seu sorvete no saquinho, o dudu gourmet mais delicioso da região.", instagramURL: "https://www.instagram.com/danilo_lira01", facebookURL: "https://www.facebook.com/Lanilo.Dira01", category: .food, promotionalText: "Sacolés dos melhores sabores", coverURL: "https://is5-ssl.mzstatic.com/image/thumb/Music1/v4/19/bc/9b/19bc9b47-6a0f-e947-1f81-c174e7de0f6d/0617465613456.jpg/200x200bb.jpeg", id: "0101010101")), isActive: .constant(true))
     }
 }
