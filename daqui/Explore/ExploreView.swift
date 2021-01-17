@@ -87,12 +87,14 @@ struct ExploreBusiness: View{
                         .foregroundColor(.primary)
                     HStack{
                         Text("Trilha \(Int(progress*100))%")
-                            .fontWeight(.medium)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color(.greenLight))
                         Spacer()
                         ProgressView(value: progress)
-                            .accentColor(Color(.systemTeal))
+                            .accentColor(Color(.cyan))
+                            .foregroundColor(Color(.cyan))
                             
-                    }.foregroundColor(Color(.systemTeal))
+                    }
                     .padding(.trailing)
                 }
                 .padding(10)

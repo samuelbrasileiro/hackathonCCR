@@ -25,7 +25,7 @@ class SelectedView: ObservableObject{
         let costumerTab: [TabViewItem] = [
             TabViewItem(UIHostingController(rootView: ExploreView(bank: ExploreBank())), name: "Explorar"),
             TabViewItem(UIHostingController(rootView: MyTrailsView(bank: MyTrailsBank())), name: "Trilhas"),
-            TabViewItem(MyWalletViewController(), name: "Cupons"),
+            TabViewItem(UIHostingController(rootView: MyWalletView()), name: "Cupons"),
             
         ]
         

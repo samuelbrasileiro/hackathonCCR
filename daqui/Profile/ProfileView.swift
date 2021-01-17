@@ -53,7 +53,7 @@ struct ProfileView: View {
                 VStack{
                     HStack{
                         Image(systemName: "mappin.and.ellipse")
-                            .foregroundColor(Color(.systemTeal))
+                            .foregroundColor(Color(.cyan))
                         Text(business.attributes.location)
                             .font(.subheadline)
                             .fontWeight(.regular)
@@ -67,7 +67,7 @@ struct ProfileView: View {
                             Image("phone")
                                 .frame(width: 20, height: 20)
                                 .padding(14)
-                                .background(Color(.systemTeal))
+                                .background(Color(.cyan))
                                 .clipShape(Circle())
                         }
                         Button(action:{
@@ -77,7 +77,7 @@ struct ProfileView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .padding(14)
-                                .background(Color(.systemTeal))
+                                .background(Color(.cyan))
                                 .clipShape(Circle())
                         }
                         Button(action:{
@@ -86,7 +86,7 @@ struct ProfileView: View {
                             Image("zap")
                                 .frame(width: 20, height: 20)
                                 .padding(14)
-                                .background(Color(.systemTeal))
+                                .background(Color(.cyan))
                                 .clipShape(Circle())
                         }
                         Spacer()

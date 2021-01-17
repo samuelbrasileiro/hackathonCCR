@@ -21,6 +21,8 @@ struct TabBarView: View {
             
             HStack {
                 ForEach(0..<self.selectedView.items.count) { index in
+                    let color = selectedView.index == index ? Color(.greenLight) : Color(.gray)
+                    
                     VStack {
                         Button(action: {
                             self.selectedView.index = index
@@ -35,7 +37,7 @@ struct TabBarView: View {
                         
                         Text(selectedView.items[index].name)
                             .font(.caption)
-                            .foregroundColor(selectedView.index == index ? .blue : .gray)
+                            .foregroundColor(color)
                     }
                     .padding(.vertical, 10)
 
