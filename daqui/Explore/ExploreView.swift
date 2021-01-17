@@ -6,50 +6,65 @@
 //
 
 import SwiftUI
-
+import FirebaseCore
 struct ExploreView: View {
-    
     @ObservedObject var bank: ExploreBank
+    
+    @State var navigatedToBusiness = false
     
     var body: some View {
         
-        VStack{
-            HStack{
-                VStack(alignment: .leading){
-                    if let user = bank.user{
-                        Text("E aí, " + user.attributes.name.split(separator: " ")[0] + "!")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
-                        
-                        Text("Bora conhecer novas empresas perto de você?!")
-                            .font(.subheadline)
+        NavigationView{
+            VStack{
+                HStack{
+                    VStack(alignment: .leading){
+                        if let user = bank.user{
+                            HStack{
+                            Text("E aí, " + user.attributes.name.split(separator: " ")[0] + "!")
+                                .font(.largeTitle)
+                                .fontWeight(.heavy)
+                            Spacer()
+                                NavigationLink(destination: Text("Configurações")){
+                                    Image(systemName: "gearshape.fill")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                }
+                                .foregroundColor(Color(.systemTeal))
+                                .padding()
+                            }
+                            Text("Bora conhecer novas empresas perto de você?!")
+                                .font(.subheadline)
+                            
+                        }
                         
                     }
+                    .padding([.leading, .top])
+                    Spacer()
                     
                 }
-                .padding([.leading, .top])
+                SearchBarView(bank: bank)
+                    .padding(.horizontal)
                 Spacer()
-            }
-            SearchBarView(bank: bank)
-                .padding(.horizontal)
-            Spacer()
-            ScrollView{
-                VStack {
-                    ForEach(0..<bank.businesses.count, id: \.self) { index in
-                        Button(action: {
-                            
-                        }){
-                            ExploreBusiness(business: bank.businesses[index])
-                                . padding()
+                ScrollView{
+                    VStack {
+                        ForEach(0..<bank.businesses.count, id: \.self) { index in
+                            NavigationLink(
+                                destination: ProfileView(business: bank.businesses[index], isActive: $navigatedToBusiness),
+                                isActive: $navigatedToBusiness){
+                                
+                                ExploreBusiness(business: bank.businesses[index])
+                                    . padding()
+                            }
                         }
                     }
+                    .padding(.bottom, 80)
+                    .resignKeyboardOnDragGesture()
                 }
-                .padding(.bottom, 80)
-                .resignKeyboardOnDragGesture()
+                
             }
-            
+            .background(Color(.systemGray6))
+            .navigationBarHidden(true)
         }
-        .background(Color(.systemGray6))
     }
 }
 
@@ -57,6 +72,7 @@ struct ExploreBusiness: View{
     @ObservedObject var business: Business
     
     @State private var progress = 0.5
+    
     
     var body: some View{
         
@@ -91,7 +107,7 @@ struct ExploreBusiness: View{
                         Spacer()
                         ProgressView(value: progress)
                             .accentColor(Color(.systemTeal))
-                            
+                        
                     }.foregroundColor(Color(.systemTeal))
                     .padding(.trailing)
                 }
