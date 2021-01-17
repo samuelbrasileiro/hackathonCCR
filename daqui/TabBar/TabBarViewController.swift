@@ -15,7 +15,7 @@ protocol SelectedViewDelegate{
 class SelectedView: ObservableObject{
     @Published var index: Int = 0
     var items: [TabViewItem] = []
-    
+    static var user: User = .business
     init(){
         
         let businessTab: [TabViewItem] = [
@@ -30,7 +30,7 @@ class SelectedView: ObservableObject{
         ]
         
         //TODO: Modificar condicional
-        self.items = true ? costumerTab : businessTab
+        items = (SelectedView.user == .costumer ? costumerTab : businessTab)
         
     }
     
@@ -39,6 +39,10 @@ class SelectedView: ObservableObject{
     }
 }
 
+enum User{
+    case costumer
+    case business
+}
 class TabBarViewController: UITabBarController, SelectedViewDelegate {
     let handler = FirebaseHandler()
     var selectedView = SelectedView()
