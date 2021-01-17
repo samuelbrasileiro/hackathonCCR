@@ -9,18 +9,14 @@ import SwiftUI
 
 struct MyWalletContent: View {
     
-    var discount: String
-    var amount: String
-    var product: String
-    var business: Business?
+    @ObservedObject var prize: Prize
     
     var body: some View {
         HStack {
-            if let safeBusiness = business{
-                Image(uiImage: safeBusiness.image!)
-                    .resizable()
-                    .frame(width: 86, height: 86)
-                    .clipShape(Circle())
+            if let trail = prize.trail{
+                
+                TrailImageView(trail: trail)
+                    .shadow(radius: 7)
             } else {
                 Circle()
                     .fill(Color(.gray))
@@ -28,14 +24,44 @@ struct MyWalletContent: View {
             }
             VStack {
                 HStack {
-                    Text(discount)
+                    Text(prize.attributes.discount)
                         .fontWeight(.bold)
                         .font(.largeTitle)
                     
-                    Text(amount)
+                    Text(prize.attributes.amount)
                 }
 
-                Text(product)
+                Text(prize.attributes.product)
+            }
+        }
+    }
+    
+    struct TrailImageView: View{
+        @ObservedObject var trail: Trail
+        
+        var body: some View{
+            if let business = trail.business{
+                BusinessImageView(business: business)
+            }else {
+                Circle()
+                    .fill(Color(.gray))
+                    .frame(width: 86, height: 86, alignment: .leading)
+            }
+        }
+        struct BusinessImageView: View{
+            @ObservedObject var business: Business
+            
+            var body: some View{
+                if let image = business.image{
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 86, height: 86)
+                        .clipShape(Circle())
+                } else {
+                    Circle()
+                        .fill(Color(.gray))
+                        .frame(width: 86, height: 86, alignment: .leading)
+                }
             }
         }
     }

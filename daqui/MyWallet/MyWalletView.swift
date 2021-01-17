@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyWalletView: View {
     
-    @ObservedObject var prizes: MyWalletBank
+    @ObservedObject var bank: MyWalletBank
     
     var body: some View {
         HStack(alignment: .firstTextBaseline, content: {
@@ -21,31 +21,37 @@ struct MyWalletView: View {
             Spacer()
         })
         
-        ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-            ForEach(prizes.prizes) { prize in
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(.systemGray6))
-                        .frame(height: 160)
+        ScrollView(.vertical, showsIndicators: true, content: {
+            LazyVStack{
+                ForEach(bank.prizes) { prize in
+                    
+                    ZStack {
+                        ZStack(alignment: .bottom){
+                            ZStack(alignment: .top){
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color(.systemGray6))
+                                    .frame(height: 160)
+                                
+                                
+                                Circle()
+                                    .fill(Color(.systemBackground))
+                                    .frame(width: 40, height: 40)
+                                    .offset(y: -20)
+                            }
+                            Circle()
+                                .fill(Color(.systemBackground))
+                                .frame(width: 40, height: 40)
+                                .offset(y: 20)
+                        }
                         .padding()
-                    
-                    Circle()
-                        .fill(Color(.systemBackground))
-                        .frame(width: 40, height: 40)
-                        .padding(.top, -90)
-                    
-                    Circle()
-                        .fill(Color(.systemBackground))
-                        .frame(width: 40, height: 40)
-                        .padding(.top, 130)
-                    
-                    MyWalletContent(discount: prize.attributes.discount,
-                                    amount: prize.attributes.amount,
-                                    product: prize.attributes.product,
-                                    business: nil)
+                        
+                        MyWalletContent(prize: prize)
+                        
+                        
+                    }
                 }
             }
+            .padding(.bottom, 60)
         })
 
     }
@@ -54,6 +60,6 @@ struct MyWalletView: View {
 struct MyWalletView_Previews: PreviewProvider {
     static var previews: some View {
         let bank = MyWalletBank()
-        MyWalletView(prizes: bank)
+        MyWalletView(bank: bank)
     }
 }

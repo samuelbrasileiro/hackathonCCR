@@ -5,14 +5,30 @@
 //  Created by Danilo Araújo on 15/01/21.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
 class Prize: Identifiable, ObservableObject {
     
     var attributes: Prize.Database
     
+    var trail: Trail?{
+        didSet {
+            suscription = trail!.objectWillChange.sink { [weak self] _ in
+                     self?.objectWillChange.send()
+               }
+        }
+   }
+    var suscription: AnyCancellable?
+
     init(database: Prize.Database) {
         attributes = database
+        
+        FirebaseHandler.readCollection(.trails, id: attributes.idTrail, dataType: Trail.Database.self){ result in
+            if case .success(let database) = result{
+                self.trail = Trail(attributes: database)
+            }
+        }
     }
     
     class Database: Codable {

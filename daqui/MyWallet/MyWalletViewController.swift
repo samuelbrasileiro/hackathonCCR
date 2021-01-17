@@ -10,7 +10,7 @@ import SwiftUI
 
 class MyWalletViewController: UIViewController {
     
-    let myWallet = UIHostingController(rootView: MyWalletView(prizes: MyWalletBank()))
+    let myWallet = UIHostingController(rootView: MyWalletView(bank: MyWalletBank()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
