@@ -25,7 +25,6 @@ class Business: ObservableObject {
 
     
     func getImage(url: String){
-        print(url)
         let request = URLRequest(url: URL(string: url)!)
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             DispatchQueue.main.async {

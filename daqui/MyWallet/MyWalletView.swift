@@ -26,11 +26,20 @@ struct MyWalletView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color(.systemGray6))
-                        .frame(height: 137)
-                        .shadow(radius: 10, x: 0, y: 0)
+                        .frame(height: 160)
                         .padding()
                     
-                    MyWalletContent(discount: prize.discount, amount: prize.amount, product: prize.product)
+                    Circle()
+                        .fill(Color(.systemBackground))
+                        .frame(width: 40, height: 40)
+                        .padding(.top, -90)
+                    
+                    Circle()
+                        .fill(Color(.systemBackground))
+                        .frame(width: 40, height: 40)
+                        .padding(.top, 130)
+                    
+                    MyWalletContent(discount: prize.attributes.discount, amount: prize.attributes.amount, product: prize.attributes.product, business: prizes.getBusiness(by: prize.attributes.idTrail))
                 }
             }
         })

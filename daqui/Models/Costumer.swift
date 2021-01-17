@@ -17,8 +17,6 @@ class Costumer: User, ObservableObject {
     init(database: Costumer.Database) {
         attributes = database
         super.init()
-        
-        
     }
     
     func commonInit(){
