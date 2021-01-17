@@ -17,7 +17,7 @@ class ExploreBank: ObservableObject{
     
     init(){
         
-        user = Costumer(database: User.Database(name: "Samuel Brasileiro", email: "samuelbsantosn@gmail.com", phone: "+5581996490709", imgURL: "https://firebasestorage.googleapis.com/v0/b/daqui-b933d.appspot.com/o/IMG_4164.jpeg?alt=media&token=d254aee0-546f-490e-be8b-55dc4c33bad1", location: "Recife, PE", id: "1234567890"))
+        user = Costumer(database: Costumer.Database(name: "Samuel Brasileiro", email: "samuelbsantosn@gmail.com", phone: "+5581996490709", imgURL: "https://firebasestorage.googleapis.com/v0/b/daqui-b933d.appspot.com/o/IMG_4164.jpeg?alt=media&token=d254aee0-546f-490e-be8b-55dc4c33bad1", location: "Recife, PE", id: "1234567890"))
         
         FirebaseHandler.readAllCollection(.businesses, dataType: [Business.Database].self){ result in
             if case .success(let businesses) = result{
