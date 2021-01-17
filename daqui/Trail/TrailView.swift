@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrailView: View {
     
-    @ObservedObject var bank: TrailBank
+    @ObservedObject var trail: Trail
     @Binding var isActive: Bool
     
     var body: some View {
@@ -20,7 +20,7 @@ struct TrailView: View {
                         .font(.largeTitle)
                         .bold()
                     
-                    if let business = bank.business {
+                    if let business = trail.business {
                         Text("Por \(business.attributes.name)")
                             .font(.callout)
                     } else {
@@ -35,13 +35,13 @@ struct TrailView: View {
             }
 
             VStack {
-                ForEach(0..<bank.missions.count, id: \.self) { index in
-                    let last = index == bank.missions.count - 1
+                ForEach(0..<trail.missions.count, id: \.self) { index in
+                    let last = index == trail.missions.count - 1
                     
                     if index % 2 == 0 {
-                        LeftSideTrailView(last: last, mission: bank.missions[index])
+                        LeftSideTrailView(last: last, mission: trail.missions[index])
                     } else {
-                        RightSideTrailView(last: last, mission: bank.missions[index])
+                        RightSideTrailView(last: last, mission: trail.missions[index])
                     }
                 }
             }
