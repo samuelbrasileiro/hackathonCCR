@@ -19,8 +19,7 @@ class SelectedView: ObservableObject{
     init(){
         
         let businessTab: [TabViewItem] = [
-            TabViewItem(UIHostingController(rootView: RecursosView()), name: "Recursos"),
-            TabViewItem(UIHostingController(rootView: TrailMissionSelectionView()), name: "Selecao")
+            TabViewItem(UIHostingController(rootView: RecursosView()), name: "Recursos")
         ]
         
         let costumerTab: [TabViewItem] = [
