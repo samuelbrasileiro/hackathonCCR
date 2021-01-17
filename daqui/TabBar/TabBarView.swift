@@ -16,7 +16,6 @@ struct TabBarView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(.systemBackground))
-                .cornerRadius(25)
                 .shadow(color: Color(.systemGray2), radius: 10, x: 0, y: 0)
                 
             
@@ -32,16 +31,15 @@ struct TabBarView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 28, height: 28)
                                 .padding(.horizontal)
-                                
-                                
                         }
                         
                         Text(selectedView.items[index].name)
                             .font(.caption)
                             .foregroundColor(selectedView.index == index ? .blue : .gray)
                     }
+                    .padding(.vertical, 10)
 
-                }
+                }.padding(.horizontal)
             }
         }
     }
