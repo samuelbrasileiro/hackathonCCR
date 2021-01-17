@@ -11,12 +11,13 @@ struct RecursosView: View {
     var body: some View {
         ScrollView(.vertical) {
             ZStack{
-                VStack{
+                VStack(alignment: .leading){
                 Text("Recursos")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                     .padding(.top, 10)
+                    .padding(.leading)
                 
                 LazyVStack{
                     RecursosCardView(imgRec: "ImageSebrae",

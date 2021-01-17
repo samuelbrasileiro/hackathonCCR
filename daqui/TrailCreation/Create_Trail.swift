@@ -11,70 +11,63 @@ import SwiftUI
 struct TrailMissionSelectionView: View{
     
     @State var selectedIndexes: [Bool] = (0..<Mission.missions.count).map{_ in false}
+    @State var navigatedToSelectPrize = false
     
     var missions = Mission.missions
     var body: some View{
-        ZStack(alignment: .bottom){
-            VStack{
-                HStack{
-                    
-                    Text("Monte Sua Trilha")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
-                    Spacer()
-                    
-                }
-                HStack{
-                    Text("Selecione as categorias que você acha mais importante no momento. Escolha no máximo quatro opções.")
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-                    Spacer()
-                    
-                }
-                ScrollView{
-                    LazyVStack(spacing: 25){
-                        ForEach(0..<missions.count, id: \.self){ index in
-                            
-                            MissionToSelectView(mission: missions[index], isSelected: $selectedIndexes[index])
-                            
-                            
-                            
-                        }
+        NavigationView {
+            ZStack(alignment: .bottom){
+                VStack{
+                    HStack{
+                        Text("Selecione as categorias que você acha mais importante no momento. Escolha no máximo quatro opções.")
+                            .foregroundColor(.secondary)
+                            .padding()
+                        Spacer()
+                        
                     }
-                    .padding(.bottom, 130)
-                    .padding()
+                    ScrollView{
+                        LazyVStack(spacing: 25){
+                            ForEach(0..<missions.count, id: \.self){ index in
+                                MissionToSelectView(mission: missions[index], isSelected: $selectedIndexes[index])
+                            }
+                        }
+                        .padding(.bottom, 130)
+                        .padding()
+                        
+                    }
+                    
                     
                 }
                 
-                
-            }
-            
-            .background(Color(.systemGray6))
-            ZStack{
-                Rectangle()
-                    .fill(Color(.systemBackground))
-                    .frame(height: 120)
-                    .shadow(radius: 20 )
-                
-                Button(action:{
+                .background(Color(.systemGray6))
+                ZStack{
+                    Rectangle()
+                        .fill(Color(.systemBackground))
+                        .frame(height: 120)
+                        .shadow(radius: 20 )
                     
-                }){
-                    Text("Próximo")
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor( Color(selectedIndexes.contains(true) ? .systemBackground : .systemBackground))
-                        .padding(.horizontal, 80)
-                        .padding(.vertical, 20)
-                        .background(Color(selectedIndexes.contains(true) ? .poolCyan : .systemGray2))
-                        .cornerRadius(14)
+                    
+                    NavigationLink(
+                        destination: SelectPrizeView(isActive: $navigatedToSelectPrize, missionIndices: selectedIndexes),
+                        isActive: $navigatedToSelectPrize,
+                        label: {
+                            Text("Próximo")
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor( Color(selectedIndexes.contains(true) ? .systemBackground : .systemBackground))
+                                .padding(.horizontal, 80)
+                                .padding(.vertical, 20)
+                                .background(Color(selectedIndexes.contains(true) ? .poolCyan : .systemGray2))
+                                .cornerRadius(14)
+                        })
                 }
-            }
+                .navigationBarTitle("Monte sua trilha")
+            }.ignoresSafeArea(.all, edges: .bottom)
         }
-        .ignoresSafeArea(.all, edges: .bottom)
         .onAppear{
             NotificationCenter.default.post(name: Notification.Name("hideTabView"), object: nil)
         }
+        
     }
     
 }

@@ -12,10 +12,21 @@ class Trail: ObservableObject {
     
     var attributes: Trail.Database
     
+    @Published var missions: [Mission] = []
     @Published var business: Business?
     
-    @Published var missions: [Mission] = []
-    
+    class func create(missions: [Bool], discount: String, product: String) {
+        let includedMissionsIndexes = (0..<missions.count).filter{missions[$0]}.map{String($0)}
+        
+        let trail = Trail.Database(id: "", idBusiness: "-MRBDZkWjH4WrM-rBwGI", idMissions: includedMissionsIndexes)
+        let trailID = FirebaseHandler.writeToCollection2(.trails, value: trail)
+        
+        if let safeTrailID = trailID {
+            let prize = Prize(database: Prize.Database(discount: discount, amount: "", product: product, id: "", idTrail: safeTrailID))
+            FirebaseHandler.writeToCollection(.prizes, value: prize.attributes)
+        }
+    }
+  
     init(attributes: Trail.Database) {
         self.attributes = attributes
         getMissions()
