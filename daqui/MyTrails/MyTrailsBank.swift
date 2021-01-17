@@ -11,7 +11,7 @@ class MyTrailsBank: ObservableObject {
     
     @Published var trails: [Trail] = []
     @Published var business: [Business] = []
-    var missions: [Mission] = []
+    @Published var missions: [Mission] = []
     
     init() {
         FirebaseHandler.readAllCollection(.trails, dataType: [Trail.Database].self){ result in

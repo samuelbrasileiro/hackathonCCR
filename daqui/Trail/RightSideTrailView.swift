@@ -10,10 +10,11 @@ import SwiftUI
 struct RightSideTrailView: View {
     
     var last: Bool = false
+    @ObservedObject var mission: Mission
     
     var body: some View {
         HStack{
-            MissionView(color: Color(.cyan))
+            MissionView(color: Color(.cyan), mission: mission)
                 .padding(.leading)
             
             if !last {
@@ -30,8 +31,8 @@ struct RightSideTrailView: View {
     }
 }
 
-struct RightSideTrailView_Previews: PreviewProvider {
-    static var previews: some View {
-        RightSideTrailView()
-    }
-}
+//struct RightSideTrailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RightSideTrailView()
+//    }
+//}

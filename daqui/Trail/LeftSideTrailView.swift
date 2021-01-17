@@ -10,6 +10,7 @@ import SwiftUI
 struct LeftSideTrailView: View {
     
     var last: Bool = false
+    @ObservedObject var mission: Mission
     
     var body: some View {
         HStack {
@@ -24,14 +25,15 @@ struct LeftSideTrailView: View {
             }
 
             
-            MissionView(color: Color(.oceanBlue))
+            MissionView(color: Color(.oceanBlue), mission: mission)
+                .padding(.trailing, last ? 20 : 0)
                 
         }
     }
 }
 
-struct LeftSideTrailView_Previews: PreviewProvider {
-    static var previews: some View {
-        LeftSideTrailView()
-    }
-}
+//struct LeftSideTrailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LeftSideTrailView()
+//    }
+//}

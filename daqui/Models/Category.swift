@@ -9,6 +9,11 @@ import Foundation
 
 class Category: ObservableObject {
     
+    var attributes: Category.Database
+    
+    init(attributes: Category.Database){
+        self.attributes = attributes
+    }
     
     class Database: Codable {
         var iconURL: String

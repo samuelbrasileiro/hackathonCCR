@@ -11,7 +11,6 @@ import Combine
 class Prize: Identifiable, ObservableObject {
     
     var attributes: Prize.Database
-    
     var trail: Trail?
     var suscription: AnyCancellable?
 

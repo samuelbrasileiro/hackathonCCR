@@ -10,6 +10,7 @@ import SwiftUI
 struct MissionView: View {
     
     var color: Color
+    @ObservedObject var mission: Mission
     
     var body: some View {
         ZStack {
@@ -19,18 +20,17 @@ struct MissionView: View {
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             
             VStack {
-                Image(systemName: "airplane")
-                    .font(.largeTitle)
-                    
-                Text("COMPRA\nANTECIPADA")
+                if let image = mission.categoryImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 47, height: 47)
+                        .font(.largeTitle)
+                }
+
+                Text(mission.attributes.title)
                     .multilineTextAlignment(.center)
+                    .padding()
             }
         }
-    }
-}
-
-struct MissionView_Previews: PreviewProvider {
-    static var previews: some View {
-        MissionView(color: Color(.oceanBlue))
     }
 }
