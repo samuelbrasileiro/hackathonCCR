@@ -11,7 +11,7 @@ struct ExploreView: View {
     @ObservedObject var bank: ExploreBank
     
     @State var navigatedToBusiness = false
-    
+    @State var navigatedToSettings = false
     var body: some View {
         
         NavigationView{
@@ -24,7 +24,7 @@ struct ExploreView: View {
                                 .font(.largeTitle)
                                 .fontWeight(.heavy)
                             Spacer()
-                                NavigationLink(destination: Text("Configurações")){
+                                NavigationLink(destination: SettingsView(costumer: user, isActive: $navigatedToSettings), isActive: $navigatedToSettings){
                                     Image(systemName: "gearshape.fill")
                                         .resizable()
                                         .frame(width: 25, height: 25)
