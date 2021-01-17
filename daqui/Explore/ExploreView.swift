@@ -115,8 +115,8 @@ struct ExploreBusiness: View{
                             .foregroundColor(Color(.greenLight))
                         Spacer()
                         ProgressView(value: CGFloat(pg)/100)
-                            .accentColor(Color(.cyan))
-                            .foregroundColor(Color(.cyan))
+                            .accentColor(Color(.poolCyan))
+                            .foregroundColor(Color(.poolCyan))
                         }
                     }
                     .padding(.trailing)

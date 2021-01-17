@@ -14,7 +14,7 @@ struct RightSideTrailView: View {
     
     var body: some View {
         HStack{
-            MissionView(color: Color(.cyan), mission: mission)
+            MissionView(color: Color(.poolCyan), mission: mission)
                 .padding(.leading)
             
             if !last {

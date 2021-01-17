@@ -49,12 +49,12 @@ class Mission: ObservableObject {
     }
     
     static var missions: [Mission] = [
-        Mission.Database(title: "Divulgação no Whatsapp", description: "O cliente irá compartilhar informações do seu negócio com contatos de seu whatsapp", isCompleted: false, id: "0", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383822218526760/Divulgacao.png"),
-        Mission.Database(title: "Compra antecipada", description: "Aqui você vai gerar capital de giro para seu negócio, através da venda de cupons", isCompleted: false, id: "1", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383828296335420/Antecipada.png"),
-        Mission.Database(title: "Post nos Stories", description: "O cliente irá publicar um stories no instagram divulgando sua marca ou produto", isCompleted: false, id: "2", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383826974474270/Publicidade.png"),
-        Mission.Database(title: "Pesquisa de mercado", description: "Através de uma enquete, você poderá testar tendências de mercado com o seu público", isCompleted: false, id: "3", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800368599755784212/MarkeIcon.png"),
-        Mission.Database(title: "Feedback do cliente", description: "Aqui você disponibiliza uma caixa de texto para o cliente compartilhar a sua experiência ou opinião!", isCompleted: false, id: "4", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383824822796298/Feedback.png"),
-        Mission.Database(title: "Publicação no Facebook", description: "O cliente irá compartilhar a página do seu negócio no Facebook", isCompleted: false, id: "5", imgURL: "https://discord.com/channels/788903632824959026/788903633268768839/800386517994176573")
+        Mission.Database(title: "Divulgação no Whatsapp", description: "O cliente irá compartilhar informações do seu negócio com contatos de seu whatsapp", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383822218526760/Divulgacao.png"),
+        Mission.Database(title: "Compra antecipada", description: "Aqui você vai gerar capital de giro para seu negócio, através da venda de cupons", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383828296335420/Antecipada.png"),
+        Mission.Database(title: "Post nos Stories", description: "O cliente irá publicar um stories no instagram divulgando sua marca ou produto", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383826974474270/Publicidade.png"),
+        Mission.Database(title: "Pesquisa de mercado", description: "Através de uma enquete, você poderá testar tendências de mercado com o seu público", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800368599755784212/MarkeIcon.png"),
+        Mission.Database(title: "Feedback do cliente", description: "Aqui você disponibiliza uma caixa de texto para o cliente compartilhar a sua experiência ou opinião!", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800383824822796298/Feedback.png"),
+        Mission.Database(title: "Publicação no Facebook", description: "O cliente irá compartilhar a página do seu negócio no Facebook", isCompleted: false, id: "", imgURL: "https://cdn.discordapp.com/attachments/788903633268768839/800386518010298418/facebook.png")
     ].map{Mission(attributes: $0)}
     
 }

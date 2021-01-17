@@ -36,7 +36,7 @@ struct SettingsView: View {
                 print("Adicionar função de mudar foto")
             }) {
                 Text("Mudar foto")
-                    .foregroundColor(Color(.cyan))
+                    .foregroundColor(Color(.poolCyan))
             }
             
             Text("Meu nome").tablefy()
@@ -72,7 +72,7 @@ struct SettingsView: View {
                 
             }){
                 Image(systemName: "chevron.left")
-                    .foregroundColor(Color(.cyan))
+                    .foregroundColor(Color(.poolCyan))
                     .font(.headline)
             }
             .padding()
