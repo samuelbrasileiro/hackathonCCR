@@ -19,15 +19,13 @@
     <a href="https://github.com/samuelbrasileiro/hackathonCCR"><strong>Explore os documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/samuelbrasileiro/hackathonCCR">TestFlight</a>
+    <a href="https://testflight.apple.com/join/ySbUmWr2">TestFlight</a>
     ·
     <a href="https://github.com/samuelbrasileiro/hackathonCCR/issues">Reportar erro</a>
     ·
     <a href="https://github.com/samuelbrasileiro/hackathonCCR/issues">Solicitar funcionalidades</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 ## Índice
@@ -42,14 +40,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
+"Daqui" é uma plataforma que busca contribuir para a redução da desigualdade social por meio da capacitação e do fortalecimento da economia local, fortalecendo jovens empreendedores que começaram recentemente o seu empreendimento.
+
+## Telas
 <img src="https://media.discordapp.net/attachments/788903633268768839/800506011738701824/Explorar.png" alt="Logo" width="187.5" height="406"> <img src="https://media.discordapp.net/attachments/788903633268768839/800505841518247946/Perfiljhj.png" alt="Logo" width="187.5" height="406">
 <img src="https://media.discordapp.net/attachments/788903633268768839/800506151905132568/Explorar.png" alt="Logo" width="187.5" height="406"> <img src="https://media.discordapp.net/attachments/788903633268768839/800506154224320522/Montar_Trilha.png" alt="Logo" width="187.5" height="406"> <img src="https://media.discordapp.net/attachments/788903633268768839/800505850040418335/Minhas_Trilhastrilhas_minhas.png" alt="Logo" width="187.5" height="406">
 
-*  "Daqui" é uma plataforma que busca contribuir para a redução da desigualdade social por meio da capacitação e do fortalecimento da economia local, fortalecendo jovens empreendedores que começaram recentemente o seu empreendimento.
-
-
-### Construido com
-Essas são as principais estruturas que nossa equipe construiu no projeto.
+## Tecnologias 
+As principais tecnologias que nossa equipe utilizou para construir o projeto foram:
 
 * [SwiftUI](https://swift.org/)
 * [Firebase](https://firebase.google.com/?hl=pt)
