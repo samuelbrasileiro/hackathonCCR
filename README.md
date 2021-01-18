@@ -16,7 +16,7 @@
   <p align="center">
     Aplicativo iOS
     <br />
-    <a href="https://github.com/samuelbrasileiro/hackathonCCR"><strong>Explore os documentos »</strong></a>
+    <a href="https://github.com/samuelbrasileiro/hackathonCCR"><strong>Explore a documentação »</strong></a>
     <br />
     <br />
     <a href="https://testflight.apple.com/join/ySbUmWr2">TestFlight</a>
@@ -30,10 +30,10 @@
 <!-- TABLE OF CONTENTS -->
 ## Índice
 
-* [Sobre o projeto](#about-the-project)
-  * [Construido com](#built-with)
+* [Sobre o projeto](#sobre-o-projeto)
+  * [Tecnologias](#tecnologias)
 * [Contribuir](#git-flow)
-  * [Adicionar novo recurso ou corrigir um bug](#add-new-feature-or-fix-a-bug)
+  * [Adicionar novo recurso ou corrigir um bug](#adicionar-novo-recurso-ou-corrigir-um-erro)
   * [Pull Request Template](#pull-request-template)
 
 
@@ -53,11 +53,11 @@ As principais tecnologias que nossa equipe utilizou para construir o projeto for
 * [Firebase](https://firebase.google.com/?hl=pt)
 
 <!-- Git Flow -->
-## Fluxo Git
+## Git Flow
 
 ### Adicionar novo recurso ou corrigir um erro
 
-1. Crie seu recurso ou filial de correção
+1. Crie seu recurso ou branch de correção
   * `git checkout -b feature/AmazingFeature`
   * `git checkout -b fix/AmazingFix`
 2. Commit suas mudanças
